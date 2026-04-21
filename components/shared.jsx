@@ -87,4 +87,14 @@ const Stars = ({ n = 5, size = 14 }) => (
   </div>
 );
 
-Object.assign(window, { Placeholder, Icon, Stars });
+const useIsMobile = (bp = 768) => {
+  const [m, setM] = React.useState(window.innerWidth < bp);
+  React.useEffect(() => {
+    const h = () => setM(window.innerWidth < bp);
+    window.addEventListener("resize", h);
+    return () => window.removeEventListener("resize", h);
+  }, [bp]);
+  return m;
+};
+
+Object.assign(window, { Placeholder, Icon, Stars, useIsMobile });

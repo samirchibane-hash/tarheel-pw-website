@@ -1,6 +1,6 @@
 // Free Water Test booking page
 const BookHero = () => (
-  <section style={{ paddingTop: 110, paddingBottom: 40, position: "relative", overflow: "hidden" }}>
+  <section className="hero-section" style={{ paddingBottom: 40 }}>
     <div style={{
       position: "absolute", inset: 0, pointerEvents: "none", opacity: .4,
       background: "radial-gradient(ellipse 700px 500px at 90% 10%, var(--blue-soft), transparent 60%)",
@@ -12,9 +12,9 @@ const BookHero = () => (
         <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Free water test</span>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 40, alignItems: "start" }}>
+      <div className="grid-2col" style={{ gap: 40, alignItems: "start" }}>
         {/* Left: copy + trust */}
-        <div style={{ position: "sticky", top: 110, alignSelf: "start" }}>
+        <div className="sticky-sidebar" style={{ top: 110, alignSelf: "start" }}>
           <span className="badge" style={{ marginBottom: 18, background: "var(--blue-soft)", color: "var(--blue)", borderColor: "transparent" }}>
             <span className="dot" style={{ background: "var(--blue)" }}></span> No cost · No obligation
           </span>
@@ -157,7 +157,7 @@ const WhatToExpect = () => {
           <div className="eyebrow" style={{ marginBottom: 14 }}>// What to expect</div>
           <h2 style={{ maxWidth: 720 }}>Three simple steps, start to finish.</h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+        <div className="grid-3col" style={{ gap: 16 }}>
           {steps.map(s => (
             <article key={s.n} style={{
               background: "var(--paper)", borderRadius: 18,
@@ -186,7 +186,7 @@ const WhatToExpect = () => {
 const BookCalendar = () => (
   <section id="calendar">
     <div className="container-wide">
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 40, alignItems: "start" }}>
+      <div className="cols-1-2" style={{ gap: 40, alignItems: "start" }}>
         {/* Left panel — trust reinforcement */}
         <div style={{ position: "sticky", top: 120 }}>
           <div className="eyebrow" style={{ marginBottom: 14 }}>// Pick a time</div>
@@ -265,7 +265,7 @@ const BookFaq = () => {
   return (
     <section style={{ background: "var(--bg-2)" }}>
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80 }}>
+        <div className="grid-faq">
           <div>
             <div className="eyebrow" style={{ marginBottom: 14 }}>// Common questions</div>
             <h2>Before you book.</h2>

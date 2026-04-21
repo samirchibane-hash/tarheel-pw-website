@@ -1,7 +1,7 @@
 // How It Works page — the four-step Tarheel process
 
 const HowHero = () => (
-  <section style={{ paddingTop: 140, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
+  <section className="hero-section" style={{ paddingBottom: 60 }}>
     <div style={{
       position: "absolute", inset: 0, pointerEvents: "none", opacity: .5,
       background: "radial-gradient(ellipse 1100px 600px at 80% 10%, var(--blue-soft), transparent 60%)",
@@ -13,7 +13,7 @@ const HowHero = () => (
         <span style={{ fontSize: 13, color: "var(--ink-2)" }}>How it works</span>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 80, alignItems: "end" }}>
+      <div className="grid-hero" style={{ alignItems: "end" }}>
         <div>
           <div className="eyebrow" style={{ marginBottom: 20 }}>// The process</div>
           <h1 style={{ marginBottom: 28, fontSize: "clamp(48px, 6vw, 84px)", letterSpacing: "-0.03em", lineHeight: 0.96 }}>
@@ -110,7 +110,9 @@ const HowSteps = () => {
   );
 };
 
-const StepRow = ({ step, flipped, last }) => (
+const StepRow = ({ step, flipped, last }) => {
+  const isMobile = useIsMobile();
+  return (
   <div style={{
     position: "relative", paddingBottom: last ? 0 : 80,
     marginBottom: last ? 0 : 40,
@@ -118,10 +120,10 @@ const StepRow = ({ step, flipped, last }) => (
   }}>
     <div style={{
       display: "grid",
-      gridTemplateColumns: flipped ? "1fr 1.3fr" : "1.3fr 1fr",
-      gap: 80, alignItems: "center",
+      gridTemplateColumns: isMobile ? "1fr" : (flipped ? "1fr 1.3fr" : "1.3fr 1fr"),
+      gap: isMobile ? 40 : 80, alignItems: "center",
     }}>
-      {flipped && <StepVisual step={step} />}
+      {!isMobile && flipped && <StepVisual step={step} />}
 
       <div>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 20 }}>
@@ -171,10 +173,11 @@ const StepRow = ({ step, flipped, last }) => (
         )}
       </div>
 
-      {!flipped && <StepVisual step={step} />}
+      {(!flipped || isMobile) && <StepVisual step={step} />}
     </div>
   </div>
-);
+  );
+};
 
 const StepVisual = ({ step }) => {
   return (
@@ -380,8 +383,7 @@ const HowPromise = () => {
           border: "1px solid var(--rule)", overflow: "hidden",
         }}>
           {items.map((it, i) => (
-            <div key={it.k} style={{
-              display: "grid", gridTemplateColumns: "1fr 2fr",
+            <div key={it.k} className="cols-1-2" style={{
               padding: "26px 32px", gap: 32, alignItems: "center",
               borderTop: i === 0 ? "none" : "1px solid var(--rule)",
             }}>
@@ -408,7 +410,7 @@ const HowCta = () => (
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(28,155,188,0.22), transparent 60%)",
         }}/>
-        <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: 40 }}>
+        <div className="grid-cta">
           <div>
             <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>// Start with step 1</div>
             <h2 style={{ color: "var(--paper)", marginBottom: 14, maxWidth: 640 }}>

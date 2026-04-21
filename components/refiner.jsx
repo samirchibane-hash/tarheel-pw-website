@@ -1,13 +1,11 @@
 // Custom Whole Home Refiner page — 4-stage filtration
 const RefinerHero = () => (
-  <section style={{ paddingTop: 140, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
+  <section className="hero-section" style={{ paddingBottom: 60 }}>
     <div style={{
       position: "absolute", inset: 0, pointerEvents: "none", opacity: .4,
       background: "radial-gradient(ellipse 900px 600px at 85% 30%, var(--blue-soft), transparent 60%)",
     }} />
-    <div className="container-wide" style={{
-      display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 60, alignItems: "center", position: "relative",
-    }}>
+    <div className="container-wide grid-hero" style={{ position: "relative" }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
           <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
@@ -130,7 +128,7 @@ const RefinerBenefits = () => {
           <div className="eyebrow" style={{ marginBottom: 16 }}>// What changes on day one</div>
           <h2 style={{ maxWidth: 760, margin: "0 auto" }}>The water you've been living with,<br/><span style={{ fontStyle: "italic" }}>quietly upgraded.</span></h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+        <div className="grid-4col" style={{ gap: 16 }}>
           {items.map(b => (
             <div key={b.t} style={{
               background: "var(--paper)", border: "1px solid var(--rule)",
@@ -204,7 +202,7 @@ const RefinerStages = () => {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "420px 1fr", gap: 60, alignItems: "start" }}>
+        <div className="grid-2col" style={{ gap: 60, alignItems: "start" }}>
           {/* Stack visual */}
           <div style={{
             background: "var(--paper)", border: "1px solid var(--rule)",
@@ -343,7 +341,7 @@ const RefinerCompare = () => {
           </p>
         </div>
 
-        <div style={{
+        <div className="table-scroll" style={{
           background: "var(--paper)", borderRadius: 22,
           border: "1px solid var(--rule)", overflow: "hidden",
         }}>
@@ -352,6 +350,7 @@ const RefinerCompare = () => {
             padding: "20px 28px", background: "var(--bg-2)",
             fontSize: 12, fontFamily: "var(--f-mono)",
             letterSpacing: ".1em", textTransform: "uppercase", color: "var(--ink-3)",
+            minWidth: 600,
           }}>
             <div>Feature</div>
             <div style={{ color: "var(--blue)", fontWeight: 600 }}>Tarheel Refiner</div>
@@ -363,7 +362,7 @@ const RefinerCompare = () => {
             <div key={i} style={{
               display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr 1fr",
               padding: "16px 28px", borderTop: "1px solid var(--rule)",
-              fontSize: 14, alignItems: "center",
+              fontSize: 14, alignItems: "center", minWidth: 600,
             }}>
               <div style={{ color: "var(--ink-2)" }}>{row.f}</div>
               <div style={{ fontWeight: 500, color: "var(--blue)" }}>{row.us}</div>
@@ -426,7 +425,7 @@ const RefinerSpecs = () => {
           <h2>System at a glance.</h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
+        <div className="grid-2col">
           {groups.map(g => (
             <div key={g.title} style={{
               background: "var(--paper)", borderRadius: 18,
@@ -470,7 +469,7 @@ const RefinerFaq = () => {
   return (
     <section>
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80 }}>
+        <div className="grid-faq">
           <div>
             <div className="eyebrow" style={{ marginBottom: 16 }}>// Common questions</div>
             <h2>Questions we hear often.</h2>
@@ -526,7 +525,7 @@ const RefinerCta = () => (
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(28,155,188,0.25), transparent 60%)",
         }}/>
-        <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: 40 }}>
+        <div className="grid-cta">
           <div>
             <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>// Next step</div>
             <h2 style={{ color: "var(--paper)", marginBottom: 14, maxWidth: 640 }}>

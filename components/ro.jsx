@@ -1,13 +1,11 @@
 // Reverse Osmosis Drinking Water page
 const ROHero = () => (
-  <section style={{ paddingTop: 140, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
+  <section className="hero-section" style={{ paddingBottom: 60 }}>
     <div style={{
       position: "absolute", inset: 0, pointerEvents: "none", opacity: .4,
       background: "radial-gradient(ellipse 900px 600px at 85% 30%, var(--blue-soft), transparent 60%)",
     }} />
-    <div className="container-wide" style={{
-      display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 60, alignItems: "center", position: "relative",
-    }}>
+    <div className="container-wide grid-hero" style={{ position: "relative" }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
           <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
@@ -148,7 +146,7 @@ const ROStages = () => {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "start" }}>
+        <div className="grid-2col" style={{ gap: 60, alignItems: "start" }}>
           {/* Flow diagram */}
           <div style={{
             background: "var(--paper)", border: "1px solid var(--rule)",
@@ -291,10 +289,7 @@ const ROContaminants = () => {
             </span>
           </div>
 
-          <div style={{
-            display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 0,
-          }}>
+          <div className="table-scroll"><div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, minWidth: 560 }}>
             {filtered.map(([name, pct], i) => {
               const highNum = parseFloat(pct.replace(/[^\d.]/g, "")) || 0;
               const isHigh = highNum >= 99;
@@ -320,7 +315,7 @@ const ROContaminants = () => {
                 No matches for "{query}"
               </div>
             )}
-          </div>
+          </div></div>
         </div>
 
         <p style={{ fontSize: 12, color: "var(--ink-3)", fontStyle: "italic", marginTop: 16, fontFamily: "var(--f-mono)" }}>
@@ -344,7 +339,7 @@ const ROUseCase = () => (
         </p>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+      <div className="grid-2col">
         <div style={{
           padding: 40, background: "var(--paper)",
           border: "1px solid var(--rule)", borderRadius: 22,
@@ -445,7 +440,7 @@ const ROSpecs = () => {
           <h2>The full spec sheet.</h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
+        <div className="grid-2col">
           {groups.map(g => (
             <div key={g.title} style={{
               background: "var(--paper)", borderRadius: 18,
@@ -489,7 +484,7 @@ const ROFaq = () => {
   return (
     <section>
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80 }}>
+        <div className="grid-faq">
           <div>
             <div className="eyebrow" style={{ marginBottom: 16 }}>// Common questions</div>
             <h2>Questions we hear often.</h2>
@@ -545,7 +540,7 @@ const ROCta = () => (
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(28,155,188,0.25), transparent 60%)",
         }}/>
-        <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: 40 }}>
+        <div className="grid-cta">
           <div>
             <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>// Next step</div>
             <h2 style={{ color: "var(--paper)", marginBottom: 14, maxWidth: 640 }}>

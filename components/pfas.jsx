@@ -1,13 +1,11 @@
 // Whole Home PFAS/PFOA page
 const PFASHero = () => (
-  <section style={{ paddingTop: 140, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
+  <section className="hero-section" style={{ paddingBottom: 60 }}>
     <div style={{
       position: "absolute", inset: 0, pointerEvents: "none", opacity: .35,
       background: "radial-gradient(ellipse 800px 600px at 80% 20%, var(--blue-soft), transparent 60%)",
     }} />
-    <div className="container-wide" style={{
-      display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 60, alignItems: "center", position: "relative",
-    }}>
+    <div className="container-wide grid-hero" style={{ position: "relative" }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
           <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
@@ -144,7 +142,7 @@ const PFASExplainer = () => {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
+        <div className="grid-2col" style={{ gap: 60, alignItems: "center" }}>
           <div style={{
             background: "var(--paper)", border: "1px solid var(--rule)",
             borderRadius: 22, padding: 40, minHeight: 420,
@@ -279,7 +277,7 @@ const PFASHowItWorks = () => {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
+        <div className="grid-2col" style={{ gap: 60, alignItems: "center" }}>
           <div style={{
             background: "var(--paper)", border: "1px solid var(--rule)",
             borderRadius: 22, padding: 40, minHeight: 440,
@@ -415,7 +413,7 @@ const PFASBenefits = () => {
           </p>
         </div>
 
-        <div style={{
+        <div className="table-scroll" style={{
           background: "var(--paper)", borderRadius: 22,
           border: "1px solid var(--rule)", overflow: "hidden",
         }}>
@@ -424,6 +422,7 @@ const PFASBenefits = () => {
             padding: "20px 28px", background: "var(--bg-2)",
             fontSize: 12, fontFamily: "var(--f-mono)",
             letterSpacing: ".1em", textTransform: "uppercase", color: "var(--ink-3)",
+            minWidth: 560,
           }}>
             <div>Feature</div>
             <div style={{ color: "var(--blue)", fontWeight: 600 }}>NWS-PFAS-8</div>
@@ -434,7 +433,7 @@ const PFASBenefits = () => {
             <div key={i} style={{
               display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
               padding: "18px 28px", borderTop: "1px solid var(--rule)",
-              fontSize: 14, alignItems: "center",
+              fontSize: 14, alignItems: "center", minWidth: 560,
             }}>
               <div style={{ color: "var(--ink-2)" }}>{row.f}</div>
               <div style={{ fontWeight: 500, color: "var(--blue)" }}>{row.us}</div>
@@ -496,7 +495,7 @@ const PFASSpecs = () => {
           <h2>The full spec sheet.</h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
+        <div className="grid-2col">
           {groups.map(g => (
             <div key={g.title} style={{
               background: "var(--paper)", borderRadius: 18,
@@ -541,7 +540,7 @@ const PFASApplications = () => {
           <div className="eyebrow" style={{ marginBottom: 16 }}>// Where it fits</div>
           <h2 style={{ maxWidth: 720 }}>Who needs PFAS filtration?</h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+        <div className="grid-4col" style={{ gap: 16 }}>
           {apps.map(a => (
             <div key={a.title} style={{
               padding: 28, background: "var(--paper)",
@@ -580,7 +579,7 @@ const PFASFaq = () => {
   return (
     <section>
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80 }}>
+        <div className="grid-faq">
           <div>
             <div className="eyebrow" style={{ marginBottom: 16 }}>// Questions</div>
             <h2>PFAS, explained.</h2>
@@ -636,7 +635,7 @@ const PFASCta = () => (
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(28,155,188,0.25), transparent 60%)",
         }}/>
-        <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: 40 }}>
+        <div className="grid-cta">
           <div>
             <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>// Next step</div>
             <h2 style={{ color: "var(--paper)", marginBottom: 14, maxWidth: 640 }}>

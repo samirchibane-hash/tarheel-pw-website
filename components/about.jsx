@@ -1,7 +1,7 @@
 // About page — Tarheel Pure Water
 
 const AboutHero = () => (
-  <section style={{ paddingTop: 140, paddingBottom: 80, position: "relative", overflow: "hidden" }}>
+  <section className="hero-section">
     <div style={{
       position: "absolute", inset: 0, pointerEvents: "none", opacity: .5,
       background: "radial-gradient(ellipse 1100px 600px at 80% 0%, var(--blue-soft), transparent 60%)",
@@ -13,7 +13,7 @@ const AboutHero = () => (
         <span style={{ fontSize: 13, color: "var(--ink-2)" }}>About</span>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 80, alignItems: "end" }}>
+      <div className="grid-hero" style={{ alignItems: "end" }}>
         <div>
           <div className="eyebrow" style={{ marginBottom: 20 }}>// About Tarheel Pure Water</div>
           <h1 style={{ marginBottom: 28, fontSize: "clamp(48px, 6vw, 84px)", letterSpacing: "-0.03em", lineHeight: 0.96 }}>
@@ -54,7 +54,7 @@ const AboutHero = () => (
 const AboutStory = () => (
   <section style={{ background: "var(--bg-2)" }}>
     <div className="container-wide">
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80, alignItems: "start" }}>
+      <div className="grid-sidebar">
         <div>
           <div className="eyebrow" style={{ marginBottom: 16 }}>// Our story</div>
           <h2 style={{ marginBottom: 20 }}>Built from a<br/>family trade.</h2>
@@ -107,7 +107,7 @@ const AboutTrust = () => {
           <div className="eyebrow" style={{ marginBottom: 16 }}>// Why families trust us</div>
           <h2 style={{ maxWidth: 720, margin: "0 auto" }}>Four reasons our neighbors call us back.</h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+        <div className="grid-4col" style={{ gap: 16 }}>
           {items.map(b => (
             <div key={b.t} style={{
               background: "var(--paper)", border: "1px solid var(--rule)",
@@ -141,7 +141,7 @@ const AboutCredentials = () => {
   return (
     <section style={{ background: "var(--bg-2)" }}>
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: 80, alignItems: "center" }}>
+        <div className="grid-sidebar" style={{ alignItems: "center" }}>
           <div>
             <div className="eyebrow" style={{ marginBottom: 16 }}>// Credentials</div>
             <h2 style={{ marginBottom: 20 }}>Licensed &amp; certified professionals.</h2>
@@ -219,10 +219,7 @@ const AboutAreas = () => {
           background: "var(--paper)", border: "1px solid var(--rule)",
           borderRadius: 22, padding: 8,
         }}>
-          <div style={{
-            display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 0,
-          }}>
+          <div className="grid-4col">
             {cities.map((city, i) => (
               <div key={city.name} style={{
                 padding: "22px 24px",
@@ -270,7 +267,7 @@ const AboutCta = () => (
           borderRadius: "50%",
           background: "radial-gradient(circle, rgba(28,155,188,0.22), transparent 60%)",
         }}/>
-        <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: 40 }}>
+        <div className="grid-cta">
           <div>
             <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>// Let's talk</div>
             <h2 style={{ color: "var(--paper)", marginBottom: 14, maxWidth: 640 }}>
