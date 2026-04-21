@@ -30,11 +30,10 @@ const Testimonials = () => {
           <h2>Trusted by North Carolina families.</h2>
         </div>
 
-        <div style={{
+        <div className="testimonials-pad" style={{
           background: "var(--paper)",
           border: "1px solid var(--rule)",
           borderRadius: 28,
-          padding: "64px 72px",
           position: "relative",
           maxWidth: 960, margin: "0 auto",
         }}>
@@ -89,9 +88,8 @@ const Testimonials = () => {
         </div>
 
         {/* Logos rail */}
-        <div style={{
-          display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 40,
-          marginTop: 64, alignItems: "center",
+        <div className="grid-logos" style={{
+          marginTop: 64,
           borderTop: "1px solid var(--rule)",
           paddingTop: 40,
         }}>
@@ -127,7 +125,7 @@ const FAQ = () => {
   return (
     <section style={{ background: "var(--bg-2)" }} id="faq">
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80 }}>
+        <div className="grid-faq">
           <div>
             <div className="eyebrow" style={{ marginBottom: 16 }}>// Questions</div>
             <h2 style={{ marginBottom: 20 }}>Straight answers.</h2>

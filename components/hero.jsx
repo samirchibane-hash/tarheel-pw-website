@@ -1,10 +1,8 @@
 // Hero — split layout: editorial left, product/lead-capture right
 const Hero = () => {
   return (
-    <section style={{ paddingTop: 140, paddingBottom: 80, position: "relative", overflow: "hidden" }}>
-      <div className="container-wide" style={{
-        display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 80, alignItems: "center",
-      }}>
+    <section className="hero-section">
+      <div className="container-wide grid-hero">
         {/* Left column */}
         <div>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 28 }}>
@@ -95,7 +93,7 @@ const HeroVisual = () => {
         </div>
 
         {/* Floating annotation 1 */}
-        <div style={{
+        <div className="hero-annotation"><div style={{
           position: "absolute", top: 40, left: -24,
           background: "var(--paper)",
           borderRadius: 14,
@@ -116,10 +114,10 @@ const HeroVisual = () => {
               12 gpg → <span style={{ color: "var(--sage)" }}>0 gpg</span>
             </div>
           </div>
-        </div>
+        </div></div>
 
         {/* Floating annotation 2 */}
-        <div style={{
+        <div className="hero-annotation"><div style={{
           position: "absolute", bottom: 90, right: -24,
           background: "var(--paper)",
           borderRadius: 14,
@@ -138,7 +136,7 @@ const HeroVisual = () => {
             <div style={{ fontSize: 11, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>protects</div>
             <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>fixtures · appliances</div>
           </div>
-        </div>
+        </div></div>
 
         {/* Bottom ticker */}
         <div style={{

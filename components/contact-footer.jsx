@@ -20,9 +20,9 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 40, alignItems: "stretch" }}>
+        <div className="grid-contact">
           {/* Left panel — image + info */}
-          <div style={{ position: "relative", borderRadius: 28, overflow: "hidden" }}>
+          <div className="contact-image-wrap" style={{ position: "relative", borderRadius: 28, overflow: "hidden" }}>
             <Placeholder label="creek running through NC forest" aspect="auto" tone="sage" rounded={0} style={{ minHeight: 600, height: "100%" }} />
             <div style={{
               position: "absolute", inset: 0,
@@ -172,7 +172,7 @@ const Footer = () => {
   return (
     <footer style={{ background: "var(--ink)", color: "var(--paper)", paddingTop: 80, paddingBottom: 32 }}>
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1.4fr repeat(4, 1fr)", gap: 40, marginBottom: 64 }}>
+        <div className="grid-footer" style={{ marginBottom: 64 }}>
           <div>
             <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 20, color: "var(--paper)" }}>
               <Logo size={44} />

@@ -44,7 +44,7 @@ const ValueProps = () => {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+        <div className="grid-3col">
           {cards.map(c => {
             const t = tones[c.tone];
             return (
@@ -105,8 +105,8 @@ const Process = () => {
   return (
     <section style={{ background: "var(--bg-2)" }} id="how">
       <div className="container-wide">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80, alignItems: "start" }}>
-          <div style={{ position: "sticky", top: 120 }}>
+        <div className="grid-sidebar">
+          <div className="sticky-sidebar" style={{ top: 120 }}>
             <div className="eyebrow" style={{ marginBottom: 16 }}>// How it works</div>
             <h2 style={{ marginBottom: 20 }}>Four steps.<br/>One clean install.</h2>
             <p style={{ color: "var(--ink-2)", maxWidth: 380, marginBottom: 28 }}>
@@ -157,16 +157,12 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div style={{
-          display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20,
-        }}>
+        <div className="grid-2col">
           {projects.slice(0, 2).map((p, i) => (
             <GalleryCard key={i} {...p} />
           ))}
         </div>
-        <div style={{
-          display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginTop: 20,
-        }}>
+        <div className="grid-3col" style={{ marginTop: 20 }}>
           {projects.slice(2).map((p, i) => (
             <GalleryCard key={i} {...p} aspect="4/3" />
           ))}
