@@ -7,7 +7,7 @@ const BookHero = () => (
     }} />
     <div className="container-wide" style={{ position: "relative" }}>
       <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 18 }}>
-        <a href="Home Page.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+        <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
         <span style={{ color: "var(--ink-4)" }}>/</span>
         <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Free water test</span>
       </div>
@@ -69,7 +69,7 @@ const BookHero = () => (
           }}>
             <div>
               <div style={{ fontSize: 11, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>Prefer to talk?</div>
-              <a href="tel:+19845550199" style={{ fontFamily: "var(--f-display)", fontSize: 20, color: "var(--ink)" }}>(984) 555-0199</a>
+              <a href="tel:+19103806339" style={{ fontFamily: "var(--f-display)", fontSize: 20, color: "var(--ink)" }}>(910) 380-6339</a>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 6, color: "var(--ink-3)", fontSize: 11 }}>
               <Stars n={5} size={10} /> 4.9 · 800+
@@ -222,8 +222,8 @@ const BookCalendar = () => (
               <Icon name="phone" size={14} />
               <span style={{ fontSize: 13, fontWeight: 500 }}>Prefer to talk?</span>
             </div>
-            <a href="tel:+19845550199" style={{ fontFamily: "var(--f-display)", fontSize: 22, color: "var(--ink)" }}>
-              (984) 555-0199
+            <a href="tel:+19103806339" style={{ fontFamily: "var(--f-display)", fontSize: 22, color: "var(--ink)" }}>
+              (910) 380-6339
             </a>
             <p style={{ fontSize: 12, color: "var(--ink-3)", marginTop: 4 }}>
               Mon–Sat · 8am–7pm · Eastern

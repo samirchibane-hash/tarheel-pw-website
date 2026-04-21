@@ -8,7 +8,7 @@ const HowHero = () => (
     }} />
     <div className="container-wide" style={{ position: "relative" }}>
       <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 28 }}>
-        <a href="Home Page.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+        <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
         <span style={{ color: "var(--ink-4)" }}>/</span>
         <span style={{ fontSize: 13, color: "var(--ink-2)" }}>How it works</span>
       </div>
@@ -69,7 +69,7 @@ const HowSteps = () => {
         "Transparent pricing, written quote",
         "No pressure — review at your pace",
       ],
-      cta: { label: "See our solutions", href: "Home Page.html#solutions" },
+      cta: { label: "See our solutions", href: "index.html#solutions" },
     },
     {
       n: "03",
@@ -423,12 +423,12 @@ const HowCta = () => (
             <a href="Book Free Water Test.html" className="btn btn-light" style={{ justifyContent: "center", padding: "16px 24px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
-            <a href="tel:+19845550199" style={{
+            <a href="tel:+19103806339" style={{
               padding: "16px 24px", borderRadius: 999,
               border: "1px solid rgba(251,248,241,0.25)", color: "var(--paper)",
               fontSize: 14, fontWeight: 500, whiteSpace: "nowrap",
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10,
-            }}>Call (984) 555-0199 <Icon name="phone" size={14} /></a>
+            }}>Call (910) 380-6339 <Icon name="phone" size={14} /></a>
           </div>
         </div>
       </div>

@@ -139,13 +139,11 @@ const Process = () => {
 
 // Work in action — gallery with before/after slider
 const Gallery = () => {
-  const [tab, setTab] = React.useState("before");
-
   const projects = [
-    { loc: "Raleigh, NC", type: "Whole-home + RO", tone: "blue", aspect: "3/4" },
-    { loc: "Cary, NC", type: "Well system overhaul", tone: "sage", aspect: "4/3" },
-    { loc: "Durham, NC", type: "Under-sink RO", tone: "warm", aspect: "3/4" },
-    { loc: "Apex, NC", type: "Softener + conditioner", tone: "blue", aspect: "4/3" },
+    { loc: "Raleigh, NC", type: "Whole-home + RO", tone: "blue", aspect: "3/4", image: "assets/gallery-raleigh-install.jpeg" },
+    { loc: "Cary, NC", type: "Well system overhaul", tone: "sage", aspect: "4/3", image: "assets/gallery-cary-well.jpeg" },
+    { loc: "Durham, NC", type: "Under-sink RO", tone: "warm", aspect: "3/4", image: "assets/gallery-durham-ro.jpeg" },
+    { loc: "Apex, NC", type: "Whole-home filtration", tone: "blue", aspect: "4/3", image: "assets/hero-softener-install.jpeg", imagePosition: "center 30%" },
   ];
 
   return (
@@ -157,39 +155,20 @@ const Gallery = () => {
           <p style={{ color: "var(--ink-2)", maxWidth: 520, margin: "0 auto" }}>
             Two decades of installs across North Carolina. Every home a different water problem, every solution custom-built.
           </p>
-
-          <div style={{
-            display: "inline-flex", marginTop: 32,
-            background: "var(--bg-2)", padding: 4, borderRadius: 999,
-          }}>
-            {["before", "after", "install"].map(t => (
-              <button key={t} onClick={() => setTab(t)}
-                style={{
-                  padding: "8px 20px", borderRadius: 999,
-                  fontSize: 13, textTransform: "capitalize",
-                  background: tab === t ? "var(--paper)" : "transparent",
-                  boxShadow: tab === t ? "var(--shadow-sm)" : "none",
-                  color: tab === t ? "var(--ink)" : "var(--ink-3)",
-                  transition: "all .2s ease",
-                }}>
-                {t}
-              </button>
-            ))}
-          </div>
         </div>
 
         <div style={{
           display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20,
         }}>
           {projects.slice(0, 2).map((p, i) => (
-            <GalleryCard key={i} {...p} tab={tab} />
+            <GalleryCard key={i} {...p} />
           ))}
         </div>
         <div style={{
           display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginTop: 20,
         }}>
           {projects.slice(2).map((p, i) => (
-            <GalleryCard key={i} {...p} tab={tab} aspect="4/3" />
+            <GalleryCard key={i} {...p} aspect="4/3" />
           ))}
           <article style={{
             background: "var(--ink)", color: "var(--paper)",
@@ -213,12 +192,25 @@ const Gallery = () => {
   );
 };
 
-const GalleryCard = ({ loc, type, tone, aspect = "3/4", tab }) => {
-  const label = tab === "before" ? `${loc} — before` : tab === "after" ? `${loc} — after install` : `${loc} — install`;
-  const activeTone = tab === "after" ? "sage" : tab === "install" ? "warm" : tone;
+const GalleryCard = ({ loc, type, tone, aspect = "3/4", image, imagePosition = "center" }) => {
   return (
     <article style={{ position: "relative" }}>
-      <Placeholder label={label} aspect={aspect} tone={activeTone} rounded={22} />
+      {image ? (
+        <div style={{
+          aspectRatio: aspect,
+          borderRadius: 22,
+          overflow: "hidden",
+          background: "var(--bg-2)",
+        }}>
+          <img
+            src={image}
+            alt={`${type} install in ${loc}`}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: imagePosition, display: "block" }}
+          />
+        </div>
+      ) : (
+        <Placeholder label={`${loc} — install`} aspect={aspect} tone={tone} rounded={22} />
+      )}
       <div style={{
         position: "absolute", bottom: 16, left: 16, right: 16,
         display: "flex", justifyContent: "space-between", alignItems: "end",

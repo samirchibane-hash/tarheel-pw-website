@@ -132,7 +132,7 @@ const FAQ = () => {
             <div className="eyebrow" style={{ marginBottom: 16 }}>// Questions</div>
             <h2 style={{ marginBottom: 20 }}>Straight answers.</h2>
             <p style={{ color: "var(--ink-2)", maxWidth: 320, marginBottom: 24 }}>
-              Still have a question? Call a real person at <strong>(984) 555-0199</strong> or email <strong>hello@tarheelpure.co</strong>.
+              Still have a question? Call a real person at <strong>(910) 380-6339</strong> or email <strong>info@tarheelpurewater.com</strong>.
             </p>
           </div>
           <div>

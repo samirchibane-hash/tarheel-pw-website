@@ -12,7 +12,7 @@ const QDHero = () => (
     }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-          <a href="Home Page.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
+          <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
           <span style={{ color: "var(--ink-4)" }}>/</span>
           <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Quantum Disinfection</span>
         </div>
@@ -525,7 +525,7 @@ const QDCta = () => (
               border: "1px solid rgba(251,248,241,0.25)", color: "var(--paper)",
               fontSize: 14, fontWeight: 500, whiteSpace: "nowrap",
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10,
-            }}>Call (984) 555-0199 <Icon name="phone" size={14} /></button>
+            }}>Call (910) 380-6339 <Icon name="phone" size={14} /></button>
           </div>
         </div>
       </div>

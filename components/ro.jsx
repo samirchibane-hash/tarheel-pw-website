@@ -10,7 +10,7 @@ const ROHero = () => (
     }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-          <a href="Home Page.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
+          <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
           <span style={{ color: "var(--ink-4)" }}>/</span>
           <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Reverse Osmosis</span>
         </div>
@@ -337,9 +337,9 @@ const ROUseCase = () => (
     <div className="container-wide">
       <div style={{ textAlign: "center", marginBottom: 56 }}>
         <div className="eyebrow" style={{ marginBottom: 16 }}>// Where it fits</div>
-        <h2 style={{ maxWidth: 720, margin: "0 auto" }}>Whole-home softens. RO finishes.</h2>
+        <h2 style={{ maxWidth: 720, margin: "0 auto" }}>Whole-home filters. RO finishes.</h2>
         <p style={{ color: "var(--ink-2)", maxWidth: 580, margin: "24px auto 0" }}>
-          The two systems solve different problems. Most Tarheel homes have both: softening
+          The two systems solve different problems. Most Tarheel homes have both: filtration
           everywhere, RO where you drink and cook.
         </p>
       </div>
@@ -360,7 +360,7 @@ const ROUseCase = () => (
           <div style={{ fontSize: 12, color: "var(--ink-3)", fontFamily: "var(--f-mono)", marginBottom: 6 }}>WHOLE-HOME REFINER</div>
           <h3 style={{ fontFamily: "var(--f-display)", fontSize: 22, marginBottom: 14 }}>Every tap, every shower</h3>
           <p style={{ fontSize: 15, color: "var(--ink-2)", lineHeight: 1.55, marginBottom: 16 }}>
-            Softens water, strips chlorine, reduces heavy metals. Protects appliances, skin, and
+            Filters water, strips chlorine, reduces heavy metals. Protects appliances, skin, and
             laundry. High flow rate — designed for bathing, cleaning, and washing.
           </p>
           <div style={{ fontSize: 13, color: "var(--ink-3)" }}>Flow: 8+ GPM · Installation: main water line</div>
@@ -560,12 +560,12 @@ const ROCta = () => (
             <a href="Book Free Water Test.html" className="btn btn-light" style={{ justifyContent: "center", padding: "16px 24px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
-            <a href="tel:+19845550199" style={{
+            <a href="tel:+19103806339" style={{
               padding: "16px 24px", borderRadius: 999,
               border: "1px solid rgba(251,248,241,0.25)", color: "var(--paper)",
               fontSize: 14, fontWeight: 500, whiteSpace: "nowrap",
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10,
-            }}>Call (984) 555-0199 <Icon name="phone" size={14} /></a>
+            }}>Call (910) 380-6339 <Icon name="phone" size={14} /></a>
           </div>
         </div>
       </div>

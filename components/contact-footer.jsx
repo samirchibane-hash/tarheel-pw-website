@@ -39,8 +39,8 @@ const Contact = () => {
                 </h2>
               </div>
               <div style={{ display: "grid", gap: 20, maxWidth: 380 }}>
-                <InfoRow icon="mail" label="Email" value="hello@tarheelpure.co" />
-                <InfoRow icon="phone" label="Phone" value="(984) 555-0199" />
+                <InfoRow icon="mail" label="Email" value="info@tarheelpurewater.com" />
+                <InfoRow icon="phone" label="Phone" value="(910) 380-6339" />
                 <InfoRow icon="pin" label="Headquarters" value="128 Hillsborough St · Raleigh, NC" />
               </div>
             </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                 </Field>
                 <Field label="Phone (optional)" error={errors.phone}>
                   <input type="tel" value={form.phone} onChange={update("phone")}
-                    placeholder="(984) 555-0199"
+                    placeholder="(910) 380-6339"
                     style={inputStyle(errors.phone)} />
                 </Field>
                 <Field label="What's going on with your water?" error={errors.message}>

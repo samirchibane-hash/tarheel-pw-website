@@ -72,7 +72,7 @@ const HeroCentered = () => (
         has ever poured.
       </h1>
       <p style={{ fontSize: 19, color: "var(--ink-2)", maxWidth: 580, margin: "0 auto 36px", lineHeight: 1.5 }}>
-        Custom filtration, softening, and reverse osmosis systems for North Carolina homes —
+        Custom filtration and reverse osmosis systems for North Carolina homes —
         installed by certified local technicians, backed for life.
       </p>
       <div style={{ display: "flex", gap: 12, justifyContent: "center", marginBottom: 80 }}>

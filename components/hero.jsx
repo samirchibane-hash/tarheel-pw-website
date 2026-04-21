@@ -1,14 +1,5 @@
 // Hero — split layout: editorial left, product/lead-capture right
 const Hero = () => {
-  const [email, setEmail] = React.useState("");
-  const [zip, setZip] = React.useState("");
-  const [submitted, setSubmitted] = React.useState(false);
-
-  const submit = (e) => {
-    e.preventDefault();
-    if (email && zip) setSubmitted(true);
-  };
-
   return (
     <section style={{ paddingTop: 140, paddingBottom: 80, position: "relative", overflow: "hidden" }}>
       <div className="container-wide" style={{
@@ -27,44 +18,25 @@ const Hero = () => {
             <span style={{ fontStyle: "italic", color: "var(--blue)" }}>your home</span> has ever poured.
           </h1>
           <p style={{ fontSize: 19, color: "var(--ink-2)", maxWidth: 520, marginBottom: 36, lineHeight: 1.5 }}>
-            Custom-built filtration, softening, and reverse osmosis systems for North Carolina
+            Custom-built filtration and reverse osmosis systems for North Carolina
             homes — installed by certified local technicians, backed for life.
           </p>
 
-          {/* Lead capture */}
-          <form onSubmit={submit} style={{
-            display: "flex", alignItems: "center", gap: 8,
-            background: "var(--paper)",
-            border: "1px solid var(--rule)",
-            borderRadius: 999,
-            padding: 8,
-            maxWidth: 540,
-            boxShadow: "var(--shadow-sm)",
-          }}>
-            <input
-              type="email" placeholder="Email address" value={email}
-              onChange={e => setEmail(e.target.value)} required
-              style={{
-                flex: 1, border: 0, outline: 0, padding: "10px 14px",
-                fontSize: 14, background: "transparent", fontFamily: "inherit",
-                minWidth: 0,
-              }}
-            />
-            <div style={{ width: 1, height: 24, background: "var(--rule)" }}/>
-            <input
-              type="text" placeholder="ZIP" value={zip} maxLength={5}
-              onChange={e => setZip(e.target.value.replace(/\D/g, ""))} required
-              style={{
-                width: 72, border: 0, outline: 0, padding: "10px 8px",
-                fontSize: 14, background: "transparent", fontFamily: "inherit",
-                textAlign: "center", letterSpacing: "0.08em",
-              }}
-            />
-            <button type="submit" className="btn btn-primary btn-sm">
-              {submitted ? "Sent ✓" : "Get a free test"}
-              {!submitted && <Icon name="arrow" size={14} />}
-            </button>
-          </form>
+          {/* CTAs */}
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", maxWidth: 540 }}>
+            <a href="Book Free Water Test.html" className="btn btn-primary" style={{
+              padding: "16px 22px", fontSize: 15,
+            }}>
+              Book free water test <Icon name="arrow" size={14} />
+            </a>
+            <a href="tel:+19103806339" className="btn" style={{
+              padding: "16px 22px", fontSize: 15,
+              border: "1px solid var(--rule)", background: "var(--paper)",
+              color: "var(--ink)",
+            }}>
+              <Icon name="phone" size={14} /> Call (910) 380-6339
+            </a>
+          </div>
           <p style={{ fontSize: 12, color: "var(--ink-3)", marginTop: 14 }}>
             Free lab-grade water test. No obligation. Results in 48 hours.
           </p>
@@ -108,12 +80,19 @@ const HeroVisual = () => {
 
       {/* Main image */}
       <div style={{ position: "relative" }}>
-        <Placeholder
-          label="under-sink RO system install"
-          aspect="4/5"
-          tone="blue"
-          rounded={22}
-        />
+        <div style={{
+          aspectRatio: "4/5",
+          borderRadius: 22,
+          overflow: "hidden",
+          background: "var(--bg-2)",
+          boxShadow: "var(--shadow-md)",
+        }}>
+          <img
+            src="assets/hero-softener-install.jpeg"
+            alt="Tarheel Pure Water whole-home filtration system installed in a customer's utility room"
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%", display: "block" }}
+          />
+        </div>
 
         {/* Floating annotation 1 */}
         <div style={{
@@ -132,16 +111,16 @@ const HeroVisual = () => {
             display: "flex", alignItems: "center", justifyContent: "center",
           }}><Icon name="beaker" size={18} /></div>
           <div>
-            <div style={{ fontSize: 11, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>TDS</div>
+            <div style={{ fontSize: 11, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>hardness</div>
             <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>
-              412 → <span style={{ color: "var(--sage)" }}>8 ppm</span>
+              12 gpg → <span style={{ color: "var(--sage)" }}>0 gpg</span>
             </div>
           </div>
         </div>
 
         {/* Floating annotation 2 */}
         <div style={{
-          position: "absolute", bottom: 60, right: -24,
+          position: "absolute", bottom: 90, right: -24,
           background: "var(--paper)",
           borderRadius: 14,
           padding: "12px 14px",
@@ -156,8 +135,8 @@ const HeroVisual = () => {
             display: "flex", alignItems: "center", justifyContent: "center",
           }}><Icon name="shield" size={18} /></div>
           <div>
-            <div style={{ fontSize: 11, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>contaminants removed</div>
-            <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>PFAS · Cl · Pb</div>
+            <div style={{ fontSize: 11, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>protects</div>
+            <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>fixtures · appliances</div>
           </div>
         </div>
 
@@ -173,16 +152,17 @@ const HeroVisual = () => {
           display: "flex", alignItems: "center", justifyContent: "space-between",
         }}>
           <div>
-            <div style={{ fontSize: 11, letterSpacing: ".1em", opacity: .6, textTransform: "uppercase", fontFamily: "var(--f-mono)" }}>model</div>
-            <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>TH-RO7 Pro · 7-stage</div>
+            <div style={{ fontSize: 11, letterSpacing: ".1em", opacity: .6, textTransform: "uppercase", fontFamily: "var(--f-mono)" }}>recent install</div>
+            <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>Whole Home Filtration · Leland, NC</div>
           </div>
-          <button style={{
+          <a href="Custom Whole Home Refiner.html" style={{
             padding: "8px 14px", borderRadius: 999,
             background: "var(--paper)", color: "var(--ink)", fontSize: 12, fontWeight: 500,
             display: "inline-flex", alignItems: "center", gap: 6,
+            textDecoration: "none",
           }}>
-            Spec sheet <Icon name="arrow-ne" size={12} />
-          </button>
+            See system <Icon name="arrow-ne" size={12} />
+          </a>
         </div>
       </div>
     </div>

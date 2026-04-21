@@ -1,4 +1,4 @@
-// Custom Whole Home Refiner page — 4-stage softening + filtration
+// Custom Whole Home Refiner page — 4-stage filtration
 const RefinerHero = () => (
   <section style={{ paddingTop: 140, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
     <div style={{
@@ -10,7 +10,7 @@ const RefinerHero = () => (
     }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-          <a href="Home Page.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
+          <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
           <span style={{ color: "var(--ink-4)" }}>/</span>
           <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Custom Whole-Home Refiner</span>
         </div>
@@ -28,7 +28,7 @@ const RefinerHero = () => (
         </h1>
         <p style={{ fontSize: 19, color: "var(--ink-2)", maxWidth: 560, marginBottom: 32, lineHeight: 1.5 }}>
           Our Premium Custom 4-Stage Whole-Home Refiner stacks catalytic carbon, fine-mesh resin,
-          KDF-85, and silica gravel into a single efficient tank — softening, dechlorinating, and
+          KDF-85, and silica gravel into a single efficient tank — filtering, dechlorinating, and
           polishing every gallon that enters your home.
         </p>
 
@@ -172,7 +172,7 @@ const RefinerStages = () => {
       sub: "High-capacity ion exchange",
       color: "#B4722B",
       removes: ["Hardness (Ca/Mg)", "Iron", "Turbidity", "Radium / chromium-6", "Uranium · vanadium"],
-      d: "The softening layer. High-capacity fine-mesh resin swaps hardness ions for sodium, protecting plumbing and appliances. Our resin also reduces heavy radionuclides — radium, hexavalent chromium, uranium, and vanadium — that standard softeners miss.",
+      d: "The filtration layer. High-capacity fine-mesh resin reduces hardness ions, protecting plumbing and appliances. Our resin also reduces heavy radionuclides — radium, hexavalent chromium, uranium, and vanadium — that standard softeners miss.",
     },
     {
       n: "03",
@@ -317,7 +317,7 @@ const StageStack = ({ active, setActive, stages }) => (
 // Comparison
 const RefinerCompare = () => {
   const rows = [
-    { f: "Primary job",        us: "Soften + filter + polish", soft: "Soften only", carbon: "Filter only", none: "Untreated" },
+    { f: "Primary job",        us: "Filter + condition + polish", soft: "Hardness only", carbon: "Filter only", none: "Untreated" },
     { f: "Chlorine / chloramine", us: "Removed (catalytic carbon)", soft: "Not removed", carbon: "Removed", none: "Not removed" },
     { f: "Hardness / scale",   us: "Removed (fine-mesh resin)", soft: "Removed", carbon: "Not removed", none: "Not removed" },
     { f: "Heavy metals",       us: "Reduced (KDF-85)", soft: "Minimal", carbon: "Minimal", none: "—" },
@@ -334,11 +334,11 @@ const RefinerCompare = () => {
           marginBottom: 48, flexWrap: "wrap", gap: 32,
         }}>
           <div>
-            <div className="eyebrow" style={{ marginBottom: 16 }}>// Why not just a softener?</div>
+            <div className="eyebrow" style={{ marginBottom: 16 }}>// Why not just a basic filter?</div>
             <h2 style={{ maxWidth: 680 }}>One system for the whole job.</h2>
           </div>
           <p style={{ color: "var(--ink-2)", maxWidth: 360 }}>
-            Most homes stack a softener and a separate carbon filter. Ours does both in one tank
+            Most homes stack a hardness filter and a separate carbon filter. Ours does both in one tank
             — smaller footprint, lower cost, fewer service calls.
           </p>
         </div>
@@ -355,7 +355,7 @@ const RefinerCompare = () => {
           }}>
             <div>Feature</div>
             <div style={{ color: "var(--blue)", fontWeight: 600 }}>Tarheel Refiner</div>
-            <div>Softener only</div>
+            <div>Hardness filter</div>
             <div>Carbon only</div>
             <div>No system</div>
           </div>
@@ -459,8 +459,8 @@ const RefinerSpecs = () => {
 // FAQ
 const RefinerFaq = () => {
   const faqs = [
-    { q: "How is this different from a regular water softener?", a: "A traditional softener only removes hardness. Our refiner combines softening with catalytic carbon (for chlorine and chloramines), KDF-85 (for heavy metals and bacteria), and a silica polishing bed — all in one tank. It's a softener and a whole-home filter in one footprint." },
-    { q: "Will I taste or feel a difference?", a: "Yes — within the first shower. Skin and hair feel softer without chlorine stripping them. Dishes dry spot-free. Soap and shampoo lather with far less product. Laundry comes out brighter and towels fluffier." },
+    { q: "How is this different from a basic hardness filter?", a: "A traditional hardness filter only removes hardness. Our refiner combines hardness reduction with catalytic carbon (for chlorine and chloramines), KDF-85 (for heavy metals and bacteria), and a silica polishing bed — all in one tank. It's a hardness filter and a whole-home filter in one footprint." },
+    { q: "Will I taste or feel a difference?", a: "Yes — within the first shower. Skin and hair feel better without chlorine stripping them. Dishes dry spot-free. Soap and shampoo lather with far less product. Laundry comes out brighter and towels fluffier." },
     { q: "What's the 'metered valve' and why does it matter?", a: "The system regenerates based on actual water usage — not a fixed timer. That means it doesn't waste salt or water when you're on vacation, and it regenerates more often when you have guests. It pays for itself over time compared to timer-based systems." },
     { q: "How much maintenance does it need?", a: "You add salt to the brine tank every few weeks (amount depends on household size and water hardness). That's it. Media lifespan is typically 8–12 years. Your Tarheel tech will confirm a schedule after your water test." },
     { q: "Does it remove PFAS?", a: "The carbon stage will capture some PFAS, but for guaranteed non-detect levels we pair this system with the NWS-PFAS-8 dedicated PFAS tank. Your water test determines whether you need one or both." },
@@ -541,12 +541,12 @@ const RefinerCta = () => (
             <a href="Book Free Water Test.html" className="btn btn-light" style={{ justifyContent: "center", padding: "16px 24px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
-            <a href="tel:+19845550199" style={{
+            <a href="tel:+19103806339" style={{
               padding: "16px 24px", borderRadius: 999,
               border: "1px solid rgba(251,248,241,0.25)", color: "var(--paper)",
               fontSize: 14, fontWeight: 500, whiteSpace: "nowrap",
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10,
-            }}>Call (984) 555-0199 <Icon name="phone" size={14} /></a>
+            }}>Call (910) 380-6339 <Icon name="phone" size={14} /></a>
           </div>
         </div>
       </div>
