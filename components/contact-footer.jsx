@@ -39,7 +39,7 @@ const Contact = () => {
                 </h2>
               </div>
               <div style={{ display: "grid", gap: 20, maxWidth: 380 }}>
-                <InfoRow icon="mail" label="Email" value="info@tarheelpurewater.com" />
+                <InfoRow icon="mail" label="Email" value="info@tarheelpurewaterservices.com" />
                 <InfoRow icon="phone" label="Phone" value="(910) 380-6339" />
                 <InfoRow icon="pin" label="Headquarters" value="128 Hillsborough St · Raleigh, NC" />
               </div>
