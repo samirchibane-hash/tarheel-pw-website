@@ -7,7 +7,7 @@ const BookHero = () => (
     }} />
     <div className="container-wide" style={{ position: "relative" }}>
       <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 18 }}>
-        <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+        <a href="/" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
         <span style={{ color: "var(--ink-4)" }}>/</span>
         <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Free water test</span>
       </div>

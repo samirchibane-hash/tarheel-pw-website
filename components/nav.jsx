@@ -18,22 +18,22 @@ const Nav = () => {
 
   const links = [
     { label: "Solutions", items: [
-      { label: "Custom Whole Home Filters", href: "Custom Whole Home Filters.html" },
-      { label: "Quantum Disinfection", href: "Quantum Disinfection.html" },
-      { label: "Whole Home PFAS/PFOA Filters", href: "Whole Home PFAS PFOA.html" },
-      { label: "Reverse Osmosis", href: "Reverse Osmosis.html" },
+      { label: "Custom Whole Home Filters", href: "Custom Whole Home Filters" },
+      { label: "Quantum Disinfection", href: "Quantum Disinfection" },
+      { label: "Whole Home PFAS/PFOA Filters", href: "Whole Home PFAS PFOA" },
+      { label: "Reverse Osmosis", href: "Reverse Osmosis" },
     ] },
-    { label: "How it works", href: "How It Works.html", items: null },
+    { label: "How it works", href: "How It Works", items: null },
     { label: "Service areas", items: [
-      { label: "Wilmington, NC", href: "Wilmington-NC.html" },
-      { label: "Jacksonville, NC", href: "Jacksonville-NC.html" },
-      { label: "Raleigh, NC", href: "Raleigh-NC.html" },
-      { label: "Fayetteville, NC", href: "Fayetteville-NC.html" },
-      { label: "Charlotte, NC", href: "Charlotte-NC.html" },
-      { label: "Columbia, SC", href: "Columbia-SC.html" },
-      { label: "Charleston, SC", href: "Charleston-SC.html" },
+      { label: "Wilmington, NC", href: "Wilmington-NC" },
+      { label: "Jacksonville, NC", href: "Jacksonville-NC" },
+      { label: "Raleigh, NC", href: "Raleigh-NC" },
+      { label: "Fayetteville, NC", href: "Fayetteville-NC" },
+      { label: "Charlotte, NC", href: "Charlotte-NC" },
+      { label: "Columbia, SC", href: "Columbia-SC" },
+      { label: "Charleston, SC", href: "Charleston-SC" },
     ]},
-    { label: "About", href: "About.html", items: null },
+    { label: "About", href: "About", items: null },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Nav = () => {
           display: "flex", alignItems: "center", justifyContent: "space-between",
           padding: "16px 0",
         }}>
-          <a href="index.html" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <a href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <Logo size={40} />
             <span style={{ fontFamily: "var(--f-display)", fontSize: 19, letterSpacing: "-0.01em", lineHeight: 1 }}>
               Tarheel Pure Water
@@ -107,7 +107,7 @@ const Nav = () => {
           {/* Desktop CTAs */}
           <div className="nav-cta" style={{ display: "flex", gap: 8, alignItems: "center" }}>
             <button className="btn btn-sm" style={{ color: "var(--ink-2)" }}>Sign in</button>
-            <a href="Book Free Water Test.html" className="btn btn-primary btn-sm">Book free water test</a>
+            <a href="Book Free Water Test" className="btn btn-primary btn-sm">Book free water test</a>
           </div>
 
           {/* Hamburger — mobile only */}
@@ -176,7 +176,7 @@ const Nav = () => {
             ))}
           </div>
           <div style={{ padding: "24px 20px", borderTop: "1px solid var(--rule)" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", padding: "16px 22px" }}>
+            <a href="Book Free Water Test" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", padding: "16px 22px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
           </div>

@@ -25,7 +25,7 @@ const LocationHero = () => {
             {l.heroSubtitle}
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "16px 22px", fontSize: 15 }}>
+            <a href="Book Free Water Test" className="btn btn-primary" style={{ padding: "16px 22px", fontSize: 15 }}>
               Book free water test — {l.city} <Icon name="arrow" size={14} />
             </a>
             <a href={l.phoneHref} className="btn" style={{
@@ -73,7 +73,7 @@ const LocationProblem = () => {
             <p style={{ fontSize: 17, color: "var(--ink-2)", lineHeight: 1.7, marginBottom: 32 }}>
               {l.waterContext}
             </p>
-            <a href="Book Free Water Test.html" className="btn btn-primary">
+            <a href="Book Free Water Test" className="btn btn-primary">
               Get your free water report <Icon name="arrow" size={14} />
             </a>
           </div>
@@ -109,22 +109,22 @@ const LocationServices = () => {
     {
       icon: "home", title: "Whole Home Filtration",
       body: "Custom carbon and sediment systems built for " + l.city + " water chemistry — municipal or well.",
-      href: "Custom Whole Home Filters.html",
+      href: "Custom Whole Home Filters",
     },
     {
       icon: "drop", title: "Reverse Osmosis",
       body: "Under-sink drinking water that tests clean. NSF-58 certified membranes, installed in 2–3 hours.",
-      href: "Reverse Osmosis.html",
+      href: "Reverse Osmosis",
     },
     {
       icon: "shield", title: "PFAS / PFOA Removal",
       body: "Dedicated ion-exchange tank that removes PFAS to non-detect levels. Critical for " + l.city + " well and municipal users.",
-      href: "Whole Home PFAS PFOA.html",
+      href: "Whole Home PFAS PFOA",
     },
     {
       icon: "beaker", title: "Well Water Treatment",
       body: "Multi-stage systems for iron, sulfur, bacteria, and hardness — sized to your exact well chemistry.",
-      href: "How It Works.html",
+      href: "How It Works",
     },
   ];
   return (
@@ -190,7 +190,7 @@ const LocationProcess = () => {
             <p style={{ color: "var(--ink-2)", marginBottom: 32, lineHeight: 1.6 }}>
               From the first test to your first clean glass — every step is documented, honest, and handled by a licensed plumber.
             </p>
-            <a href="Book Free Water Test.html" className="btn btn-primary">
+            <a href="Book Free Water Test" className="btn btn-primary">
               Book free test <Icon name="arrow" size={14} />
             </a>
           </div>
@@ -369,7 +369,7 @@ const LocationCta = () => {
             A licensed Tarheel tech drives to your home, tests for 16 contaminants on-site, and leaves you with a written report. No pressure. No obligation.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "16px 26px", fontSize: 15 }}>
+            <a href="Book Free Water Test" className="btn btn-primary" style={{ padding: "16px 26px", fontSize: 15 }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
             <a href={l.phoneHref} className="btn" style={{

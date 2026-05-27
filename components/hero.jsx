@@ -1,6 +1,6 @@
 // Hero — split layout: editorial left, product/lead-capture right
 const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/wIhOgf9kvlvy0pp9SQ2y/webhook-trigger/LKZAFwxjB0wpYeaMYxXt";
-const BOOKING_URL = "https://www.tarheelpurewaterservices.co/Book%20Free%20Water%20Test.html";
+const BOOKING_URL = "https://www.tarheelpurewaterservices.co/Book%20Free%20Water%20Test";
 
 const HeroForm = () => {
   const [form, setForm] = React.useState({ name: "", phone: "", email: "" });
@@ -237,7 +237,7 @@ const HeroVisual = () => {
             <div style={{ fontSize: 11, letterSpacing: ".1em", opacity: .6, textTransform: "uppercase", fontFamily: "var(--f-mono)" }}>recent install</div>
             <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>Whole Home Filtration · Leland, NC</div>
           </div>
-          <a href="Custom Whole Home Refiner.html" style={{
+          <a href="Custom Whole Home Refiner" style={{
             padding: "8px 14px", borderRadius: 999,
             background: "var(--paper)", color: "var(--ink)", fontSize: 12, fontWeight: 500,
             display: "inline-flex", alignItems: "center", gap: 6,

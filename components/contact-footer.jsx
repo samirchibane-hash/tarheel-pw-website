@@ -185,25 +185,25 @@ const inputStyle = (err) => ({
 const Footer = () => {
   const cols = [
     { title: "Solutions", links: [
-      { label: "Custom Whole Home Filters", href: "Custom Whole Home Filters.html" },
-      { label: "Quantum Disinfection", href: "Quantum Disinfection.html" },
-      { label: "Whole Home PFAS/PFOA Filters", href: "Whole Home PFAS PFOA.html" },
-      { label: "Reverse Osmosis", href: "Reverse Osmosis.html" },
+      { label: "Custom Whole Home Filters", href: "Custom Whole Home Filters" },
+      { label: "Quantum Disinfection", href: "Quantum Disinfection" },
+      { label: "Whole Home PFAS/PFOA Filters", href: "Whole Home PFAS PFOA" },
+      { label: "Reverse Osmosis", href: "Reverse Osmosis" },
     ]},
     { title: "Company", links: [
-      { label: "Home", href: "index.html" },
-      { label: "About", href: "About.html" },
-      { label: "How it works", href: "How It Works.html" },
-      { label: "Book a free test", href: "Book Free Water Test.html" },
+      { label: "Home", href: "/" },
+      { label: "About", href: "About" },
+      { label: "How it works", href: "How It Works" },
+      { label: "Book a free test", href: "Book Free Water Test" },
     ]},
     { title: "Service areas", links: [
-      { label: "Wilmington, NC", href: "Wilmington-NC.html" },
-      { label: "Jacksonville, NC", href: "Jacksonville-NC.html" },
-      { label: "Raleigh, NC", href: "Raleigh-NC.html" },
-      { label: "Fayetteville, NC", href: "Fayetteville-NC.html" },
-      { label: "Charlotte, NC", href: "Charlotte-NC.html" },
-      { label: "Columbia, SC", href: "Columbia-SC.html" },
-      { label: "Charleston, SC", href: "Charleston-SC.html" },
+      { label: "Wilmington, NC", href: "Wilmington-NC" },
+      { label: "Jacksonville, NC", href: "Jacksonville-NC" },
+      { label: "Raleigh, NC", href: "Raleigh-NC" },
+      { label: "Fayetteville, NC", href: "Fayetteville-NC" },
+      { label: "Charlotte, NC", href: "Charlotte-NC" },
+      { label: "Columbia, SC", href: "Columbia-SC" },
+      { label: "Charleston, SC", href: "Charleston-SC" },
     ]},
   ];
   return (

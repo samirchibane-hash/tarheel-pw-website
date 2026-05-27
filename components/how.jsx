@@ -8,7 +8,7 @@ const HowHero = () => (
     }} />
     <div className="container-wide" style={{ position: "relative" }}>
       <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 28 }}>
-        <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+        <a href="/" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
         <span style={{ color: "var(--ink-4)" }}>/</span>
         <span style={{ fontSize: 13, color: "var(--ink-2)" }}>How it works</span>
       </div>
@@ -56,7 +56,7 @@ const HowSteps = () => {
         "Written results, same visit",
         "Zero obligation, zero upsell pressure",
       ],
-      cta: { label: "Book your free test", href: "Book Free Water Test.html" },
+      cta: { label: "Book your free test", href: "Book Free Water Test" },
     },
     {
       n: "02",
@@ -422,7 +422,7 @@ const HowCta = () => (
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <a href="Book Free Water Test.html" className="btn btn-light" style={{ justifyContent: "center", padding: "16px 24px" }}>
+            <a href="Book Free Water Test" className="btn btn-light" style={{ justifyContent: "center", padding: "16px 24px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
             <a href="tel:+19103806339" style={{
