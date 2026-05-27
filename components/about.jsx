@@ -183,18 +183,18 @@ const AboutCredentials = () => {
 
 const AboutAreas = () => {
   const cities = [
-    { name: "Smithfield, NC", primary: true },
     { name: "Wilmington, NC", primary: true },
-    { name: "Clayton, NC" },
-    { name: "Raleigh, NC" },
+    { name: "Jacksonville, NC", primary: true },
+    { name: "Raleigh, NC", primary: true },
+    { name: "Fayetteville, NC", primary: true },
+    { name: "Charlotte, NC" },
+    { name: "Columbia, SC" },
+    { name: "Charleston, SC" },
+    { name: "Leland, NC" },
+    { name: "Hampstead, NC" },
     { name: "Garner, NC" },
     { name: "Apex, NC" },
     { name: "Cary, NC" },
-    { name: "Durham, NC" },
-    { name: "Chapel Hill, NC" },
-    { name: "Fayetteville, NC" },
-    { name: "Sanford, NC" },
-    { name: "Goldsboro, NC" },
   ];
   return (
     <section>

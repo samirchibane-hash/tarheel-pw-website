@@ -166,7 +166,7 @@ const Footer = () => {
   const cols = [
     { title: "Solutions", links: ["Custom Whole Home Filters", "Quantum Disinfection", "Whole Home PFAS/PFOA Filters", "Reverse Osmosis"] },
     { title: "Company", links: ["About", "Our process", "Careers", "Blog", "Contact"] },
-    { title: "Service areas", links: ["Raleigh", "Durham", "Chapel Hill", "Charlotte", "Asheville", "See all"] },
+    { title: "Service areas", links: ["Wilmington", "Jacksonville", "Raleigh", "Fayetteville", "Charlotte", "Columbia, SC", "Charleston, SC"] },
     { title: "Resources", links: ["Water test reports", "Warranty", "Financing"] },
   ];
   return (

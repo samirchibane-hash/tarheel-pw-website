@@ -258,7 +258,7 @@ const BookFaq = () => {
     { q: "Is it really free?", a: "Yes — the test, the report, and the consultation are all free. We cover the cost because we know a real water test is the only honest way to recommend a system. You're under zero obligation to buy anything." },
     { q: "How long does the visit take?", a: "About 45 minutes. Your tech will collect samples from your main line and a representative tap, run on-site tests, and walk you through the results before leaving." },
     { q: "Do I need to do anything to prepare?", a: "Nothing — just be home and have access to your main water line (often in a utility room, basement, or garage). We'll bring everything else." },
-    { q: "What areas do you serve?", a: "We service the Raleigh–Durham–Chapel Hill triangle, Charlotte metro, Asheville, and most of central and western North Carolina. If you're outside our service map, we'll refer you to a trusted partner." },
+    { q: "What areas do you serve?", a: "Our primary service areas are Wilmington, Jacksonville, Raleigh, Fayetteville, and surrounding communities. We also serve Charlotte NC, Columbia SC, and Charleston SC. Give us a call if you're unsure — we cover more than most expect." },
     { q: "Do you test well water?", a: "Yes. Well water tests include additional parameters (iron, sulfur, tannins, bacteria indicators, nitrates) at no extra cost. About 60% of the homes we test are on well." },
   ];
   const [open, setOpen] = React.useState(0);

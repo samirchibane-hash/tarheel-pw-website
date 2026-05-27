@@ -24,7 +24,7 @@ const Nav = () => {
       { label: "Reverse Osmosis", href: "Reverse Osmosis.html" },
     ] },
     { label: "How it works", href: "How It Works.html", items: null },
-    { label: "Service areas", items: ["Raleigh", "Durham", "Chapel Hill", "Charlotte", "Asheville"] },
+    { label: "Service areas", items: ["Wilmington", "Jacksonville", "Raleigh", "Fayetteville", "Charlotte", "Columbia, SC", "Charleston, SC"] },
     { label: "About", href: "About.html", items: null },
   ];
 
