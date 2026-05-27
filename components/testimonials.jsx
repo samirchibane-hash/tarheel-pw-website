@@ -115,11 +115,11 @@ const Testimonials = () => {
 // FAQ
 const FAQ = () => {
   const faqs = [
-    { q: "How much does a whole-home system typically cost?", a: "It depends on your water chemistry and home size. After your free test, we'll give you a fixed-price proposal — most whole-home systems range $2,400–$6,800 installed, with financing available at 0% APR for qualified buyers." },
+    { q: "How much does a whole-home system typically cost?", a: "It depends on your water chemistry and home size. After your free test, we'll give you a fixed-price proposal." },
     { q: "Do you handle well water?", a: "Yes — well water is our specialty. About 60% of our installs are well systems. We test for iron, sulfur, tannins, nitrates, bacteria, and heavy metals, then design a multi-stage system tuned to your specific well." },
     { q: "How long does installation take?", a: "Most whole-home systems install in 4–6 hours. Under-sink RO systems are usually 2–3 hours. We schedule one tech per home so your point of contact never changes." },
-    { q: "What's covered under the lifetime warranty?", a: "All equipment parts, tanks, and housings are covered for life. Filters and membranes are consumables and are replaced on our annual service visits, which are included for the first two years." },
-    { q: "Are your systems NSF certified?", a: "Every system we install uses NSF-42, 53, and 58 certified components. The full certification sheets are included in your customer portal after install." },
+    { q: "What's covered under the lifetime warranty?", a: "All equipment parts, tanks, and housings are covered for life. Filters and membranes are consumables and are replaced on our annual service visits." },
+    { q: "Are your systems NSF certified?", a: "Every system we install uses NSF-42, 53, and 58 certified components." },
   ];
   const [open, setOpen] = React.useState(0);
   return (
