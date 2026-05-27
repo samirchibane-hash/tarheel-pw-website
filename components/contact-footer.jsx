@@ -6,7 +6,9 @@ const Contact = () => {
 
   const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
-  const submit = (e) => {
+  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/wIhOgf9kvlvy0pp9SQ2y/webhook-trigger/LKZAFwxjB0wpYeaMYxXt";
+
+  const submit = async (e) => {
     e.preventDefault();
     const errs = {};
     if (!form.name.trim()) errs.name = "Name required";
@@ -14,7 +16,25 @@ const Contact = () => {
     if (form.phone && !/^[\d\s\-\(\)\+]{7,}$/.test(form.phone)) errs.phone = "Invalid phone";
     if (form.message.trim().length < 10) errs.message = "Tell us a bit more";
     setErrors(errs);
-    if (Object.keys(errs).length === 0) setSent(true);
+    if (Object.keys(errs).length > 0) return;
+
+    const [firstName, ...rest] = form.name.trim().split(" ");
+    try {
+      await fetch(GHL_WEBHOOK, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName,
+          lastName: rest.join(" ") || "",
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+          source: "Contact Form",
+        }),
+      });
+    } catch (_) {}
+    setSent(true);
   };
 
   return (
