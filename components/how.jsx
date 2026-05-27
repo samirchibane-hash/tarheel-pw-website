@@ -49,9 +49,9 @@ const HowSteps = () => {
       n: "01",
       title: "Test your water",
       pitch: "Know what you're drinking.",
-      d: "A Tarheel technician comes to your home with a lab kit and tests for 42 parameters — chlorine, hardness, iron, TDS, pH, heavy metals, bacterial indicators, PFAS screening. It's free, it takes about 45 minutes, and you walk away with a written report.",
+      d: "A Tarheel technician comes to your home with a lab kit and tests for 16 parameters — chlorine, hardness, iron, TDS, pH, heavy metals, bacterial indicators, PFAS screening. It's free, it takes about 45 minutes, and you walk away with a written report.",
       bullets: [
-        "42-parameter lab-grade test",
+        "16-parameter lab-grade test",
         "Both municipal & well water",
         "Written results, same visit",
         "Zero obligation, zero upsell pressure",

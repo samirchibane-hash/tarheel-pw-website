@@ -23,14 +23,14 @@ const BookHero = () => (
             <span style={{ fontStyle: "italic", color: "var(--blue)" }}>in-home</span> water test.
           </h1>
           <p style={{ fontSize: 16, color: "var(--ink-2)", maxWidth: 480, lineHeight: 1.5, marginBottom: 22 }}>
-            A certified Tarheel tech will come to your home, test for 42 contaminants on-site,
+            A certified Tarheel tech will come to your home, test for 16 contaminants on-site,
             and walk you through exactly what's in your water. 45 minutes. Zero pressure.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 22, maxWidth: 480 }}>
             {[
               { n: "45 min", l: "on-site" },
-              { n: "42", l: "contaminants" },
+              { n: "16", l: "contaminants" },
               { n: "$0", l: "you pay" },
             ].map(s => (
               <div key={s.l} style={{
@@ -142,7 +142,7 @@ const WhatToExpect = () => {
     {
       n: "02", icon: "beaker",
       t: "In-home testing",
-      d: "Your tech tests your water on-site for 42 parameters — hardness, pH, chlorine, TDS, iron, bacteria indicators, and more.",
+      d: "Your tech tests your water on-site for 16 parameters — hardness, pH, chlorine, TDS, iron, bacteria indicators, and more.",
     },
     {
       n: "03", icon: "check",
@@ -321,7 +321,7 @@ const BookProof = () => (
           <Stars n={5} size={16} />
           <div>
             <div style={{ fontSize: 15, fontWeight: 500 }}>4.9 · 800+ reviews</div>
-            <div style={{ fontSize: 12, color: "var(--ink-3)" }}>Google · Angi · BBB A+</div>
+            <div style={{ fontSize: 12, color: "var(--ink-3)" }}>Google · Angi</div>
           </div>
         </div>
         <div style={{ fontSize: 14, color: "var(--ink-2)", fontStyle: "italic", maxWidth: 560 }}>

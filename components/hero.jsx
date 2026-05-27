@@ -16,8 +16,8 @@ const Hero = () => {
             <span style={{ fontStyle: "italic", color: "var(--blue)" }}>your home</span> has ever poured.
           </h1>
           <p style={{ fontSize: 19, color: "var(--ink-2)", maxWidth: 520, marginBottom: 36, lineHeight: 1.5 }}>
-            Custom-built filtration and reverse osmosis systems for North Carolina
-            homes — installed by certified local technicians, backed for life.
+            Custom-built filtration, reverse osmosis, bacteria removal, problem well water and PFAS
+            systems installed by our Master Plumber — backed for life.
           </p>
 
           {/* CTAs */}
@@ -36,7 +36,7 @@ const Hero = () => {
             </a>
           </div>
           <p style={{ fontSize: 12, color: "var(--ink-3)", marginTop: 14 }}>
-            Free lab-grade water test. No obligation. Results in 48 hours.
+            Free lab-grade water test. No obligation. Results immediately.
           </p>
 
           {/* Trust strip */}

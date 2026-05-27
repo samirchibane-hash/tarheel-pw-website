@@ -10,8 +10,8 @@ const ValueProps = () => {
     {
       tag: "02", icon: "beaker", tone: "sage",
       title: "Lab-grade, in-home testing",
-      body: "Our techs test for 42 contaminants on-site and send a detailed water report before we ever propose a system.",
-      stat: "Free, 48hr results", link: "See sample report",
+      body: "Our techs test for 16 contaminants on-site and send a detailed water report before we ever propose a system.",
+      stat: "Free, immediate results", link: "See sample report",
     },
     {
       tag: "03", icon: "shield", tone: "warm",
@@ -97,10 +97,10 @@ const ValueProps = () => {
 // Process / how-it-works
 const Process = () => {
   const steps = [
-    { n: "01", t: "Free water test", d: "We come to you. A certified tech collects samples and tests 42 parameters on-site." },
+    { n: "01", t: "Free water test", d: "We come to you. A certified tech collects samples and tests 16 parameters on-site." },
     { n: "02", t: "Custom proposal", d: "You get a water report and a system spec built around your home's chemistry — not a catalog." },
     { n: "03", t: "Install in a day", d: "Most systems are installed in 4–6 hours. We clean up, walk you through everything, and register your warranty." },
-    { n: "04", t: "Lifetime support", d: "Annual filter service, remote TDS monitoring, and a direct line to your install tech." },
+    { n: "04", t: "Lifetime support", d: "Annual filter service and a direct line to your install tech." },
   ];
   return (
     <section style={{ background: "var(--bg-2)" }} id="how">
