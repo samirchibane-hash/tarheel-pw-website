@@ -164,15 +164,32 @@ const inputStyle = (err) => ({
 // Footer
 const Footer = () => {
   const cols = [
-    { title: "Solutions", links: ["Custom Whole Home Filters", "Quantum Disinfection", "Whole Home PFAS/PFOA Filters", "Reverse Osmosis"] },
-    { title: "Company", links: ["About", "Our process", "Careers", "Blog", "Contact"] },
-    { title: "Service areas", links: ["Wilmington, NC", "Jacksonville, NC", "Raleigh, NC", "Fayetteville, NC", "Charlotte, NC", "Columbia, SC", "Charleston, SC"] },
-    { title: "Resources", links: ["Water test reports", "Warranty", "Financing"] },
+    { title: "Solutions", links: [
+      { label: "Custom Whole Home Filters", href: "Custom Whole Home Filters.html" },
+      { label: "Quantum Disinfection", href: "Quantum Disinfection.html" },
+      { label: "Whole Home PFAS/PFOA Filters", href: "Whole Home PFAS PFOA.html" },
+      { label: "Reverse Osmosis", href: "Reverse Osmosis.html" },
+    ]},
+    { title: "Company", links: [
+      { label: "Home", href: "index.html" },
+      { label: "About", href: "About.html" },
+      { label: "How it works", href: "How It Works.html" },
+      { label: "Book a free test", href: "Book Free Water Test.html" },
+    ]},
+    { title: "Service areas", links: [
+      { label: "Wilmington, NC", href: "Wilmington-NC.html" },
+      { label: "Jacksonville, NC", href: "Jacksonville-NC.html" },
+      { label: "Raleigh, NC", href: "Raleigh-NC.html" },
+      { label: "Fayetteville, NC", href: "Fayetteville-NC.html" },
+      { label: "Charlotte, NC", href: "Charlotte-NC.html" },
+      { label: "Columbia, SC", href: "Columbia-SC.html" },
+      { label: "Charleston, SC", href: "Charleston-SC.html" },
+    ]},
   ];
   return (
     <footer style={{ background: "var(--ink)", color: "var(--paper)", paddingTop: 80, paddingBottom: 32 }}>
       <div className="container-wide">
-        <div className="grid-footer" style={{ marginBottom: 64 }}>
+        <div className="grid-footer" style={{ marginBottom: 64, gridTemplateColumns: "1.4fr repeat(3, 1fr)" }}>
           <div>
             <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 20, color: "var(--paper)" }}>
               <Logo size={44} />
@@ -197,9 +214,9 @@ const Footer = () => {
               <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>{c.title}</div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
                 {c.links.map(l => (
-                  <li key={l}><a href="#" style={{ fontSize: 14, opacity: .75 }}
+                  <li key={l.label}><a href={l.href} style={{ fontSize: 14, opacity: .75 }}
                     onMouseEnter={e => e.currentTarget.style.opacity = 1}
-                    onMouseLeave={e => e.currentTarget.style.opacity = 0.75}>{l}</a></li>
+                    onMouseLeave={e => e.currentTarget.style.opacity = 0.75}>{l.label}</a></li>
                 ))}
               </ul>
             </div>
