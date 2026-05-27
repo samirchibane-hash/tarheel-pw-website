@@ -134,7 +134,6 @@ const AboutTrust = () => {
 const AboutCredentials = () => {
   const creds = [
     "North Carolina Licensed Plumber — License # NC L34486",
-    "EPA Water Treatment Specialist",
     "Water Quality Association Certified",
     "Fully Insured and Bonded",
   ];
