@@ -97,4 +97,7 @@ const useIsMobile = (bp = 768) => {
   return m;
 };
 
-Object.assign(window, { Placeholder, Icon, Stars, useIsMobile });
+// Existing-customer service booking (GoReminders) — opens scheduler in a new tab
+const BOOK_SERVICE_URL = "https://www.goreminders.com/book/657b069edc360862";
+
+Object.assign(window, { Placeholder, Icon, Stars, useIsMobile, BOOK_SERVICE_URL });

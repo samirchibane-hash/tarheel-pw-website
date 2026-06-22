@@ -106,7 +106,8 @@ const Nav = () => {
 
           {/* Desktop CTAs */}
           <div className="nav-cta" style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <button className="btn btn-sm" style={{ color: "var(--ink-2)" }}>Sign in</button>
+            <a href={BOOK_SERVICE_URL} target="_blank" rel="noopener noreferrer"
+               className="btn btn-sm" style={{ color: "var(--ink-2)" }}>Schedule service</a>
             <a href="Book Free Water Test" className="btn btn-primary btn-sm">Book free water test</a>
           </div>
 
@@ -175,9 +176,12 @@ const Nav = () => {
               </div>
             ))}
           </div>
-          <div style={{ padding: "24px 20px", borderTop: "1px solid var(--rule)" }}>
+          <div style={{ padding: "24px 20px", borderTop: "1px solid var(--rule)", display: "grid", gap: 12 }}>
             <a href="Book Free Water Test" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", padding: "16px 22px" }}>
               Book free water test <Icon name="arrow" size={14} />
+            </a>
+            <a href={BOOK_SERVICE_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ width: "100%", justifyContent: "center", padding: "16px 22px" }}>
+              Existing customer? Schedule service
             </a>
           </div>
         </div>

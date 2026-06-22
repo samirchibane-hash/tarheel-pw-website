@@ -195,6 +195,7 @@ const Footer = () => {
       { label: "About", href: "About" },
       { label: "How it works", href: "How It Works" },
       { label: "Book a free test", href: "Book Free Water Test" },
+      { label: "Schedule service", href: BOOK_SERVICE_URL, external: true },
     ]},
     { title: "Service areas", links: [
       { label: "Wilmington, NC", href: "Wilmington-NC" },
@@ -234,7 +235,9 @@ const Footer = () => {
               <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>{c.title}</div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
                 {c.links.map(l => (
-                  <li key={l.label}><a href={l.href} style={{ fontSize: 14, opacity: .75 }}
+                  <li key={l.label}><a href={l.href}
+                    {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    style={{ fontSize: 14, opacity: .75 }}
                     onMouseEnter={e => e.currentTarget.style.opacity = 1}
                     onMouseLeave={e => e.currentTarget.style.opacity = 0.75}>{l.label}</a></li>
                 ))}
