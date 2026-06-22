@@ -1,97 +1,5 @@
 // Hero — split layout: editorial left, product/lead-capture right
-const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/wIhOgf9kvlvy0pp9SQ2y/webhook-trigger/LKZAFwxjB0wpYeaMYxXt";
 const BOOKING_URL = "https://www.tarheelpurewaterservices.co/Book%20Free%20Water%20Test";
-
-const HeroForm = () => {
-  const [form, setForm] = React.useState({ name: "", phone: "", email: "" });
-  const [errors, setErrors] = React.useState({});
-  const [status, setStatus] = React.useState("idle"); // idle | submitting
-
-  const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
-
-  const validate = () => {
-    const errs = {};
-    if (!form.name.trim()) errs.name = "Required";
-    if (!/^[\d\s\-\(\)\+]{7,}$/.test(form.phone)) errs.phone = "Valid phone required";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Valid email required";
-    return errs;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const errs = validate();
-    setErrors(errs);
-    if (Object.keys(errs).length > 0) return;
-
-    setStatus("submitting");
-    const [firstName, ...rest] = form.name.trim().split(" ");
-    const lastName = rest.join(" ") || "";
-
-    try {
-      await fetch(GHL_WEBHOOK, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstName, lastName, email: form.email, phone: form.phone, source: "Hero Form" }),
-      });
-    } catch (_) {}
-
-    window.location.href = BOOKING_URL;
-  };
-
-  const fieldStyle = (err) => ({
-    width: "100%", padding: "12px 14px", borderRadius: 10, fontSize: 14,
-    border: `1px solid ${err ? "#d9534f" : "var(--rule)"}`,
-    background: "var(--paper)", color: "var(--ink)",
-    outline: "none", fontFamily: "var(--f-text)",
-    boxSizing: "border-box",
-  });
-
-  return (
-    <form onSubmit={handleSubmit} noValidate style={{
-      background: "var(--paper)", borderRadius: 18, padding: 24,
-      border: "1px solid var(--rule)", boxShadow: "var(--shadow-md)",
-      maxWidth: 480, marginBottom: 8,
-    }}>
-      <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 4 }}>Get your free water test</div>
-      <p style={{ fontSize: 13, color: "var(--ink-3)", marginBottom: 18 }}>
-        A licensed tech comes to your home. No obligation, results immediately.
-      </p>
-      <div style={{ display: "grid", gap: 10, marginBottom: 12 }}>
-        <div>
-          <input
-            type="text" placeholder="Full name" value={form.name}
-            onChange={update("name")} style={fieldStyle(errors.name)}
-          />
-          {errors.name && <div style={{ fontSize: 11, color: "#d9534f", marginTop: 4 }}>{errors.name}</div>}
-        </div>
-        <div>
-          <input
-            type="tel" placeholder="Phone number" value={form.phone}
-            onChange={update("phone")} style={fieldStyle(errors.phone)}
-          />
-          {errors.phone && <div style={{ fontSize: 11, color: "#d9534f", marginTop: 4 }}>{errors.phone}</div>}
-        </div>
-        <div>
-          <input
-            type="email" placeholder="Email address" value={form.email}
-            onChange={update("email")} style={fieldStyle(errors.email)}
-          />
-          {errors.email && <div style={{ fontSize: 11, color: "#d9534f", marginTop: 4 }}>{errors.email}</div>}
-        </div>
-      </div>
-      <button type="submit" className="btn btn-primary" disabled={status === "submitting"} style={{
-        width: "100%", justifyContent: "center", padding: "14px 20px", fontSize: 15,
-        opacity: status === "submitting" ? 0.7 : 1,
-      }}>
-        {status === "submitting" ? "Sending…" : <>Book my free water test <Icon name="arrow" size={14} /></>}
-      </button>
-      <p style={{ fontSize: 11, color: "var(--ink-4)", marginTop: 10, textAlign: "center" }}>
-        Free. No obligation. We never sell your information.
-      </p>
-    </form>
-  );
-};
 
 const Hero = () => {
   return (
@@ -114,7 +22,14 @@ const Hero = () => {
             systems installed by our Master Plumber — backed for life.
           </p>
 
-          <HeroForm />
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 20 }}>
+            <a href={BOOKING_URL} className="btn btn-primary" style={{ padding: "16px 26px", fontSize: 16 }}>
+              Book my free water test <Icon name="arrow" size={15} />
+            </a>
+            <span style={{ fontSize: 13, color: "var(--ink-3)" }}>
+              Free · no obligation · results on the spot
+            </span>
+          </div>
 
           <a href="tel:+19103806339" style={{
             display: "inline-flex", alignItems: "center", gap: 8,
