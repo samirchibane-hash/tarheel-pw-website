@@ -34,6 +34,7 @@ const Nav = () => {
       { label: "Charleston, SC", href: "Charleston-SC" },
     ]},
     { label: "About", href: "About", items: null },
+    { label: "Refer & earn $500", href: "Referral Program", items: null },
   ];
 
   return (

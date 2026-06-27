@@ -194,6 +194,7 @@ const Footer = () => {
       { label: "Home", href: "/" },
       { label: "About", href: "About" },
       { label: "How it works", href: "How It Works" },
+      { label: "Refer & earn $500", href: "Referral Program" },
       { label: "Book a free test", href: "Book Free Water Test" },
       { label: "Schedule service", href: BOOK_SERVICE_URL, external: true },
     ]},
