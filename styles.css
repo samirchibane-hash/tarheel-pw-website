@@ -111,8 +111,27 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
 .grid-sidebar { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
 .grid-faq     { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; }
 .grid-contact { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: stretch; }
-.grid-footer  { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 40px; }
+.grid-footer  { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; }
 .grid-logos   { display: grid; grid-template-columns: repeat(6, 1fr); gap: 40px; align-items: center; }
+
+/* ── Footer ──────────────────────────────────────────────── */
+.site-footer        { background: var(--ink); color: var(--paper); padding-top: 80px; padding-bottom: 32px; }
+.footer-grid        { margin-bottom: 64px; }
+.footer-brand-name  { display: flex; gap: 10px; align-items: center; margin-bottom: 20px; color: var(--paper); }
+.footer-links       { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.footer-links a     { font-size: 14px; opacity: .75; }
+.footer-links a:hover { opacity: 1; }
+.footer-social      { display: flex; gap: 8px; }
+.footer-social a    { width: 36px; height: 36px; border-radius: 999px; background: rgba(251,248,241,0.08);
+                      display: inline-flex; align-items: center; justify-content: center;
+                      font-size: 11px; font-family: var(--f-mono); letter-spacing: .1em; }
+.footer-wordmark    { font-family: var(--f-display); font-size: clamp(80px, 15vw, 240px); line-height: .9;
+                      letter-spacing: -.04em; color: rgba(251,248,241,0.06); white-space: nowrap;
+                      overflow: hidden; margin-bottom: 32px; font-style: italic; font-weight: 400; }
+.footer-legal       { display: flex; justify-content: space-between; align-items: center; padding-top: 24px;
+                      border-top: 1px solid rgba(251,248,241,0.1); font-size: 12px; opacity: .5;
+                      flex-wrap: wrap; gap: 16px; }
+.footer-legal-links { display: flex; gap: 20px; }
 
 .hero-section    { padding-top: 140px; padding-bottom: 80px; position: relative; overflow: hidden; }
 .testimonials-pad { padding: 64px 72px; }
@@ -134,8 +153,7 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
   .grid-3col,
   .grid-sidebar,
   .grid-faq,
-  .grid-contact,
-  .grid-footer  { grid-template-columns: 1fr; gap: 24px; }
+  .grid-contact { grid-template-columns: 1fr; gap: 24px; }
 
   .grid-logos   { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
@@ -156,4 +174,18 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
 
   .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .table-scroll > * { min-width: 560px; }
+
+  /* Footer: brand full width, link columns 2-up, larger tap targets */
+  .site-footer     { padding-top: 48px; padding-bottom: 24px; }
+  .grid-footer     { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+  .footer-grid     { margin-bottom: 40px; }
+  .footer-brand    { grid-column: 1 / -1; }
+  .footer-col-wide { grid-column: 1 / -1; }
+  .footer-col-wide .footer-links { grid-template-columns: 1fr 1fr; }
+  .footer-links    { gap: 4px; }
+  .footer-links a  { display: inline-block; padding: 7px 0; }
+  .footer-social a { width: 44px; height: 44px; }
+  .footer-wordmark { font-size: clamp(34px, 11.5vw, 80px); margin-bottom: 24px; }
+  .footer-legal    { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-legal-links { gap: 18px; flex-wrap: wrap; }
 }

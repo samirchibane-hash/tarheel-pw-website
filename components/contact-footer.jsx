@@ -198,7 +198,7 @@ const Footer = () => {
       { label: "Book a free test", href: "Book Free Water Test" },
       { label: "Schedule service", href: BOOK_SERVICE_URL, external: true },
     ]},
-    { title: "Service areas", links: [
+    { title: "Service areas", wide: true, links: [
       { label: "Wilmington, NC", href: "Wilmington-NC" },
       { label: "Jacksonville, NC", href: "Jacksonville-NC" },
       { label: "Raleigh, NC", href: "Raleigh-NC" },
@@ -209,38 +209,30 @@ const Footer = () => {
     ]},
   ];
   return (
-    <footer style={{ background: "var(--ink)", color: "var(--paper)", paddingTop: 80, paddingBottom: 32 }}>
+    <footer className="site-footer">
       <div className="container-wide">
-        <div className="grid-footer" style={{ marginBottom: 64, gridTemplateColumns: "1.4fr repeat(3, 1fr)" }}>
-          <div>
-            <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 20, color: "var(--paper)" }}>
+        <div className="grid-footer footer-grid">
+          <div className="footer-brand">
+            <div className="footer-brand-name">
               <Logo size={44} />
               <span style={{ fontFamily: "var(--f-display)", fontSize: 22 }}>Tarheel Pure Water</span>
             </div>
             <p style={{ fontSize: 14, opacity: .7, maxWidth: 320, marginBottom: 24 }}>
               Family-owned water solutions for North Carolina homes. Since 2011.
             </p>
-            <div style={{ display: "flex", gap: 8 }}>
+            <div className="footer-social">
               {["IG", "FB", "YT", "LI"].map(s => (
-                <a key={s} href="#" style={{
-                  width: 36, height: 36, borderRadius: 999,
-                  background: "rgba(251,248,241,0.08)",
-                  display: "inline-flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 11, fontFamily: "var(--f-mono)", letterSpacing: ".1em",
-                }}>{s}</a>
+                <a key={s} href="#">{s}</a>
               ))}
             </div>
           </div>
           {cols.map(c => (
-            <div key={c.title}>
+            <div key={c.title} className={c.wide ? "footer-col-wide" : undefined}>
               <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)", marginBottom: 16 }}>{c.title}</div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
+              <ul className="footer-links">
                 {c.links.map(l => (
                   <li key={l.label}><a href={l.href}
-                    {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    style={{ fontSize: 14, opacity: .75 }}
-                    onMouseEnter={e => e.currentTarget.style.opacity = 1}
-                    onMouseLeave={e => e.currentTarget.style.opacity = 0.75}>{l.label}</a></li>
+                    {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{l.label}</a></li>
                 ))}
               </ul>
             </div>
@@ -248,29 +240,11 @@ const Footer = () => {
         </div>
 
         {/* Giant wordmark */}
-        <div style={{
-          fontFamily: "var(--f-display)",
-          fontSize: "clamp(80px, 15vw, 240px)",
-          lineHeight: 0.9,
-          letterSpacing: "-0.04em",
-          color: "rgba(251,248,241,0.06)",
-          whiteSpace: "nowrap",
-          overflow: "hidden",
-          marginBottom: 32,
-          fontStyle: "italic",
-          fontWeight: 400,
-        }}>
-          Tarheel Pure.
-        </div>
+        <div className="footer-wordmark">Tarheel Pure.</div>
 
-        <div style={{
-          display: "flex", justifyContent: "space-between", alignItems: "center",
-          paddingTop: 24, borderTop: "1px solid rgba(251,248,241,0.1)",
-          fontSize: 12, opacity: .5,
-          flexWrap: "wrap", gap: 16,
-        }}>
+        <div className="footer-legal">
           <div>© {new Date().getFullYear()} Tarheel Pure Water, LLC · NC Plumbing Lic. #P-XXXXX</div>
-          <div style={{ display: "flex", gap: 20 }}>
+          <div className="footer-legal-links">
             <a href="#">Privacy</a>
             <a href="#">Terms</a>
             <a href="#">Accessibility</a>
