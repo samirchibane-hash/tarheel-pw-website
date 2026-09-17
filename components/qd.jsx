@@ -33,7 +33,6 @@ const QDHero = () => (
 
         <div style={{ display: "flex", gap: 12, marginBottom: 48 }}>
           <button className="btn btn-primary">Book free water test <Icon name="arrow" size={14} /></button>
-          <button className="btn btn-ghost">Download spec sheet <Icon name="arrow-ne" size={12} /></button>
         </div>
 
         {/* Key stats */}
@@ -511,7 +510,7 @@ const QDCta = () => (
             </h2>
             <p style={{ maxWidth: 520, opacity: .8, fontSize: 17 }}>
               Book a free lab-grade water test. A certified Tarheel tech will come out, test your water for
-              42 contaminants, and tell you honestly whether Quantum Disinfection belongs in your system.
+              numerous contaminants, and tell you honestly whether Quantum Disinfection belongs in your system.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>

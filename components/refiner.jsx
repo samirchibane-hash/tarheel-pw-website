@@ -32,7 +32,6 @@ const RefinerHero = () => (
 
         <div style={{ display: "flex", gap: 12, marginBottom: 48 }}>
           <a href="Book Free Water Test" className="btn btn-primary">Book free water test <Icon name="arrow" size={14} /></a>
-          <button className="btn btn-ghost">Download spec sheet <Icon name="arrow-ne" size={12} /></button>
         </div>
 
         <div style={{
@@ -462,7 +461,7 @@ const RefinerFaq = () => {
     { q: "Will I taste or feel a difference?", a: "Yes — within the first shower. Skin and hair feel better without chlorine stripping them. Dishes dry spot-free. Soap and shampoo lather with far less product. Laundry comes out brighter and towels fluffier." },
     { q: "What's the 'metered valve' and why does it matter?", a: "The system regenerates based on actual water usage — not a fixed timer. That means it doesn't waste salt or water when you're on vacation, and it regenerates more often when you have guests. It pays for itself over time compared to timer-based systems." },
     { q: "How much maintenance does it need?", a: "You add salt to the brine tank a couple of times per year (amount depends on household size and water hardness). That's it. Media lifespan is typically 8–12 years. Your Tarheel tech will confirm a schedule after your water test." },
-    { q: "Does it remove PFAS?", a: "The carbon stage will capture some PFAS, but for guaranteed non-detect levels we pair this system with the NWS-PFAS-8 dedicated PFAS tank. Your water test determines whether you need one or both." },
+    { q: "Does it remove PFAS?", a: "The carbon stage will capture some PFAS, but for guaranteed non-detectable levels we pair this system with the NWS-PFAS-8 dedicated PFAS tank. Your water test, plus the published PFAS data for your area, determines whether you need one or both." },
     { q: "Will it work with my plumbing?", a: "In almost every case, yes. The system is custom-sized to your flow rate and household usage — we confirm fit during the on-site water test and walk you through installation requirements before you commit." },
   ];
   const [open, setOpen] = React.useState(0);

@@ -27,12 +27,11 @@ const PFASHero = () => (
         <p style={{ fontSize: 19, color: "var(--ink-2)", maxWidth: 560, marginBottom: 32, lineHeight: 1.5 }}>
           Our NWS-PFAS-8 whole-home system uses ResinTech's SIR-110-HP selective ion-exchange resin
           to pull PFAS and PFOA — "forever chemicals" — from every tap in your home, down to
-          non-detect levels.
+          non-detectable levels.
         </p>
 
         <div style={{ display: "flex", gap: 12, marginBottom: 48 }}>
           <a href="Book Free Water Test" className="btn btn-primary">Book free water test <Icon name="arrow" size={14} /></a>
-          <button className="btn btn-ghost">Download spec sheet <Icon name="arrow-ne" size={12} /></button>
         </div>
 
         <div style={{
@@ -40,7 +39,7 @@ const PFASHero = () => (
           borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)",
         }}>
           {[
-            { n: "ND", l: "non-detect PFAS levels" },
+            { n: "ND", l: "non-detectable PFAS levels" },
             { n: "8 GPM", l: "flow capacity" },
             { n: "Whole-home", l: "point-of-entry" },
             { n: "Lifetime", l: "limited warranty" },
@@ -262,7 +261,7 @@ const PFASHowItWorks = () => {
     },
     {
       t: "Clean water to every tap",
-      d: "PFAS concentrations drop below EPA criteria — often to non-detect. No additional stages, no chemicals, no wastewater stream.",
+      d: "PFAS concentrations drop below EPA criteria — often to non-detectable. No additional stages, no chemicals, no wastewater stream.",
     },
   ];
   return (
@@ -388,7 +387,7 @@ const PFASFlowDiagram = ({ step }) => (
 // Comparison table
 const PFASBenefits = () => {
   const features = [
-    { f: "PFAS/PFOA reduction",      us: "Below EPA criteria (non-detect)", carbon: "Inconsistent, varies by brand", none: "None" },
+    { f: "PFAS/PFOA reduction",      us: "Below EPA criteria (non-detectable)", carbon: "Inconsistent, varies by brand", none: "None" },
     { f: "Media type",               us: "SIR-110-HP selective resin", carbon: "Generic activated carbon", none: "—" },
     { f: "Coverage",                 us: "Whole home (every tap)", carbon: "Usually point-of-use only", none: "—" },
     { f: "Flow rate",                us: "8 GPM (expandable in parallel)", carbon: "Typically 1–2 GPM", none: "—" },
@@ -454,7 +453,7 @@ const PFASSpecs = () => {
       title: "Performance",
       items: [
         ["Main use", "PFAS/PFOA removal"],
-        ["Reduction level", "Below EPA criteria (often non-detect)"],
+        ["Reduction level", "Below EPA criteria (often non-detectable)"],
         ["Max flow rate", "8 GPM · expandable in parallel"],
         ["Contaminants targeted", "Wide spectrum of PFAS chemicals"],
       ],
@@ -568,11 +567,11 @@ const PFASApplications = () => {
 // FAQ
 const PFASFaq = () => {
   const faqs = [
-    { q: "Is PFAS in my water?", a: "Almost certainly at some concentration. PFAS have been detected in the majority of North Carolina public water utilities and in many private wells, particularly in the Cape Fear basin and near any industrial or military site. Your free water test will include PFAS screening." },
+    { q: "Is PFAS in my water?", a: "Almost certainly at some concentration. PFAS have been detected in the majority of North Carolina public water utilities and in many private wells, particularly in the Cape Fear basin and near any industrial or military site. We look up the published PFAS results for your utility on EWG.org and go through them with you." },
     { q: "What's special about SIR-110-HP resin?", a: "SIR-110-HP is a selective ion-exchange resin engineered specifically for PFAS and PFOA. Unlike generic carbon filters that capture PFAS inconsistently, SIR-110-HP has fast kinetics, high capacity, and holds its WQA Gold Seal certification." },
-    { q: "How does this compare to a whole-home carbon filter?", a: "Carbon can remove some PFAS, but performance varies wildly by brand and saturates quickly. SIR-110-HP is designed for PFAS from the start, stays effective longer, and brings concentrations to non-detect levels — something most carbon systems cannot guarantee." },
+    { q: "How does this compare to a whole-home carbon filter?", a: "Carbon can remove some PFAS, but performance varies wildly by brand and saturates quickly. SIR-110-HP is designed for PFAS from the start, stays effective longer, and brings concentrations to non-detectable levels — something most carbon systems cannot guarantee." },
     { q: "How often does the media need to be replaced?", a: "Media life depends on your PFAS load and water usage. Your Tarheel tech will estimate replacement cadence based on your water test results — typically multi-year cycles for most households." },
-    { q: "Does it remove anything besides PFAS?", a: "The NWS-PFAS-8 is specialized for PFAS. For chlorine, hardness, iron, or bacteria, we pair it with the appropriate Tarheel stage — PFAS removal is usually one layer in a broader whole-home system." },
+    { q: "Does it remove anything besides PFAS?", a: "The NWS-PFAS-8 is specialized for PFAS. For chlorine, hardness, iron, or bacteria, we pair it with the right complementary system — like our whole-home refiner or Quantum Disinfection. PFAS removal is usually one layer in a broader whole-home setup." },
     { q: "What size home does it fit?", a: "The 8 GPM flow handles most typical households. For larger homes or higher peak demand, we add additional NWS-PFAS-8 units in parallel — the system scales cleanly." },
   ];
   const [open, setOpen] = React.useState(0);
@@ -642,8 +641,9 @@ const PFASCta = () => (
               Find out if PFAS is in your water.
             </h2>
             <p style={{ maxWidth: 520, opacity: .8, fontSize: 17 }}>
-              Book a free lab-grade water test. We'll test for PFAS/PFOA and 40 other parameters,
-              then tell you honestly whether the NWS-PFAS-8 belongs on your main line.
+              Book a free in-home water test. We'll test your water for numerous contaminants and
+              review the published PFAS results for your municipality through EWG.org, then tell you
+              honestly whether the NWS-PFAS-8 belongs on your main line.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>

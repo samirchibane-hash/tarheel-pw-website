@@ -35,7 +35,7 @@ const HowHero = () => (
             <span style={{ color: "var(--ink-3)", fontFamily: "var(--f-mono)", whiteSpace: "nowrap" }}>Day 0</span><span>Book online, free</span>
             <span style={{ color: "var(--ink-3)", fontFamily: "var(--f-mono)", whiteSpace: "nowrap" }}>~Day 3</span><span>In-home water test</span>
             <span style={{ color: "var(--ink-3)", fontFamily: "var(--f-mono)", whiteSpace: "nowrap" }}>Same visit</span><span>Custom recommendation</span>
-            <span style={{ color: "var(--ink-3)", fontFamily: "var(--f-mono)", whiteSpace: "nowrap" }}>1–2 weeks</span><span>Installation day</span>
+            <span style={{ color: "var(--ink-3)", fontFamily: "var(--f-mono)", whiteSpace: "nowrap" }}>Same or next day</span><span>Installation — typically 4–6 hours</span>
           </div>
         </div>
       </div>
@@ -49,9 +49,9 @@ const HowSteps = () => {
       n: "01",
       title: "Test your water",
       pitch: "Know what you're drinking.",
-      d: "A Tarheel technician comes to your home with a lab kit and tests for 16 parameters — chlorine, hardness, iron, TDS, pH, heavy metals, bacterial indicators, PFAS screening. It's free, it takes about 45 minutes, and you walk away with a written report.",
+      d: "A Tarheel technician comes to your home with a lab kit and tests for numerous parameters — chlorine, hardness, iron, TDS, pH, heavy metals, and bacterial indicators. It's free, it takes about 45 minutes, and you walk away with a written report.",
       bullets: [
-        "16-parameter lab-grade test",
+        "Lab-grade test, done on-site",
         "Both municipal & well water",
         "Written results, same visit",
         "Zero obligation, zero upsell pressure",
@@ -69,7 +69,7 @@ const HowSteps = () => {
         "Transparent pricing, written quote",
         "No pressure — review at your pace",
       ],
-      cta: { label: "See our solutions", href: "index.html#solutions" },
+      cta: { label: "See our solutions", href: "/#value" },
     },
     {
       n: "03",
@@ -231,7 +231,7 @@ const VisualTest = () => (
     <rect x="181" y="114" width="12" height="8" fill="var(--sage)" />
     {/* Label */}
     <text x="200" y="310" textAnchor="middle" fontSize="11" fontFamily="var(--f-mono)" fill="var(--ink-3)" letterSpacing="2">
-      42 PARAMETERS · ON-SITE
+      ON-SITE WATER TESTING
     </text>
   </svg>
 );

@@ -152,7 +152,7 @@ const HeroVisual = () => {
             <div style={{ fontSize: 11, letterSpacing: ".1em", opacity: .6, textTransform: "uppercase", fontFamily: "var(--f-mono)" }}>recent install</div>
             <div style={{ fontFamily: "var(--f-display)", fontSize: 18 }}>Whole Home Filtration · Leland, NC</div>
           </div>
-          <a href="Custom Whole Home Refiner" style={{
+          <a href="Custom Whole Home Filters" style={{
             padding: "8px 14px", borderRadius: 999,
             background: "var(--paper)", color: "var(--ink)", fontSize: 12, fontWeight: 500,
             display: "inline-flex", alignItems: "center", gap: 6,

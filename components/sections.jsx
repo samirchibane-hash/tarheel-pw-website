@@ -5,19 +5,19 @@ const ValueProps = () => {
       tag: "01", icon: "home", tone: "blue",
       title: "Built for North Carolina water",
       body: "From well-heavy counties to municipal chlorine-heavy lines — every system is tuned to your local water chemistry.",
-      stat: "37 county profiles", link: "Service areas",
+      stat: "37 county profiles",
     },
     {
       tag: "02", icon: "beaker", tone: "sage",
       title: "Lab-grade, in-home testing",
-      body: "Our techs test for 16 contaminants on-site and send a detailed water report before we ever propose a system.",
-      stat: "Free, immediate results", link: "See sample report",
+      body: "Our techs test for numerous contaminants on-site and send a detailed water report before we ever propose a system.",
+      stat: "Free, immediate results",
     },
     {
       tag: "03", icon: "shield", tone: "warm",
       title: "Installed for life",
       body: "Every system comes with lifetime parts, annual maintenance, and a no-fault workmanship guarantee.",
-      stat: "Lifetime warranty", link: "How it works",
+      stat: "Lifetime warranty", link: "How it works", href: "How It Works",
     },
   ];
   const tones = {
@@ -78,12 +78,14 @@ const ValueProps = () => {
                   display: "flex", alignItems: "center", justifyContent: "space-between",
                 }}>
                   <span style={{ fontSize: 13, color: t.fg, fontWeight: 500 }}>{c.stat}</span>
-                  <a href="#" style={{
-                    fontSize: 13, color: "var(--ink)",
-                    display: "inline-flex", alignItems: "center", gap: 6,
-                  }}>
-                    {c.link} <Icon name="arrow-ne" size={12} />
-                  </a>
+                  {c.link && (
+                    <a href={c.href} style={{
+                      fontSize: 13, color: "var(--ink)",
+                      display: "inline-flex", alignItems: "center", gap: 6,
+                    }}>
+                      {c.link} <Icon name="arrow-ne" size={12} />
+                    </a>
+                  )}
                 </div>
               </article>
             );
@@ -97,7 +99,7 @@ const ValueProps = () => {
 // Process / how-it-works
 const Process = () => {
   const steps = [
-    { n: "01", t: "Free water test", d: "We come to you. A certified tech collects samples and tests 16 parameters on-site." },
+    { n: "01", t: "Free water test", d: "We come to you. A certified tech collects samples and tests numerous parameters on-site." },
     { n: "02", t: "Custom proposal", d: "You get a water report and a system spec built around your home's chemistry — not a catalog." },
     { n: "03", t: "Install in a day", d: "Most systems are installed in 4–6 hours. We clean up, walk you through everything, and register your warranty." },
     { n: "04", t: "Lifetime support", d: "Annual filter service and a direct line to your install tech." },
@@ -162,26 +164,10 @@ const Gallery = () => {
             <GalleryCard key={i} {...p} />
           ))}
         </div>
-        <div className="grid-3col" style={{ marginTop: 20 }}>
+        <div className="grid-2col" style={{ marginTop: 20 }}>
           {projects.slice(2).map((p, i) => (
             <GalleryCard key={i} {...p} aspect="4/3" />
           ))}
-          <article style={{
-            background: "var(--ink)", color: "var(--paper)",
-            borderRadius: 22, padding: 32,
-            display: "flex", flexDirection: "column", justifyContent: "space-between",
-            aspectRatio: "4/3",
-          }}>
-            <div className="eyebrow" style={{ color: "rgba(251,248,241,0.5)" }}>// case study</div>
-            <div>
-              <h3 style={{ color: "var(--paper)", marginBottom: 16, fontFamily: "var(--f-display)" }}>
-                How we brought a 412 ppm well down to drinking-glass clean.
-              </h3>
-              <a href="#" style={{ color: "var(--paper)", fontSize: 14, display: "inline-flex", alignItems: "center", gap: 6 }}>
-                Read case study <Icon name="arrow-ne" size={14} />
-              </a>
-            </div>
-          </article>
         </div>
       </div>
     </section>

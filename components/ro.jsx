@@ -32,7 +32,6 @@ const ROHero = () => (
 
         <div style={{ display: "flex", gap: 12, marginBottom: 48 }}>
           <a href="Book Free Water Test" className="btn btn-primary">Book free water test <Icon name="arrow" size={14} /></a>
-          <button className="btn btn-ghost">Download spec sheet <Icon name="arrow-ne" size={12} /></button>
         </div>
 
         <div style={{
@@ -382,7 +381,7 @@ const ROUseCase = () => (
           <h3 style={{ fontFamily: "var(--f-display)", fontSize: 22, marginBottom: 14, color: "var(--paper)", position: "relative" }}>The water you drink & cook with</h3>
           <p style={{ fontSize: 15, color: "rgba(251,248,241,0.75)", lineHeight: 1.55, marginBottom: 16, position: "relative" }}>
             Near-laboratory purification for the handful of gallons a day you actually consume.
-            Removes what whole-home can't — fluoride, nitrates, pharmaceutical residues, lead
+            Removes what whole-home systems can't — fluoride, nitrates, pharmaceutical residues, lead
             picked up from plumbing.
           </p>
           <div style={{ fontSize: 13, color: "rgba(251,248,241,0.5)", position: "relative" }}>Flow: slow · dedicated faucet · under-sink</div>
@@ -476,7 +475,7 @@ const ROFaq = () => {
     { q: "Does reverse osmosis remove healthy minerals?", a: "Yes — RO is thorough and removes nearly everything dissolved in water, including some minerals. The trade-off is worth it for most families: the minerals you get from food are vastly more significant than what comes from tap water, and what RO removes (lead, fluoride, nitrates, pharmaceutical residues) matters much more for health. We can add a remineralization stage if you prefer." },
     { q: "How much water does it 'waste'?", a: "Traditional RO systems produce 3–4 gallons of brine for every gallon of purified water. The brine goes down the drain. It's a small tradeoff — most households use only 1–2 gallons of drinking water a day. Modern efficient RO systems cut this ratio significantly." },
     { q: "Will it be fast enough for drinking and cooking?", a: "Yes. The pressurized storage tank holds 2–4 gallons of purified water ready to pour, refilling automatically. You'll never wait on the faucet." },
-    { q: "Does it remove PFAS?", a: "RO is one of the few point-of-use systems that meaningfully reduces PFAS — typically 90%+ reduction. For guaranteed non-detect levels throughout the house, we pair it with our NWS-PFAS-8 whole-home tank." },
+    { q: "Does it remove PFAS?", a: "RO is one of the few point-of-use systems that meaningfully reduces PFAS — typically 90%+ reduction. For guaranteed non-detectable levels throughout the house, we pair it with our NWS-PFAS-8 whole-home tank." },
     { q: "What does maintenance look like?", a: "Change the three pre/post cartridges every 12–18 months (a five-minute job, no tools). The RO membrane itself lasts 2–5 years. The bladder tank goes every 5 years. We remind you when each is due." },
     { q: "How is the Tarheel RO different from what I'd buy online?", a: "Cheap online RO kits use generic membranes and housings. Ours uses commercial-grade components with a 10-year warranty, and we size and install it for your specific water chemistry after testing — which is why reduction percentages actually hold up in practice." },
   ];

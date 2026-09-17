@@ -74,8 +74,8 @@ const AboutStory = () => (
         <div style={{ fontSize: 18, color: "var(--ink-2)", lineHeight: 1.6, maxWidth: 680 }}>
           <p style={{ marginBottom: 24 }}>
             We started Tarheel Pure Water Services, LLC as a division of Paxton Plumbing Services,
-            LLC to better service our filtration equipment and trust other brands in the greater
-            Cape Fear Region.
+            LLC to better service our own filtration equipment and other trusted brands in the
+            greater Cape Fear Region.
           </p>
           <p style={{ marginBottom: 24 }}>
             With years of experience in plumbing and water treatment, we recognized the growing need

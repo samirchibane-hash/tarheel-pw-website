@@ -118,7 +118,7 @@ const LocationServices = () => {
     },
     {
       icon: "shield", title: "PFAS / PFOA Removal",
-      body: "Dedicated ion-exchange tank that removes PFAS to non-detect levels. Critical for " + l.city + " well and municipal users.",
+      body: "Dedicated ion-exchange tank that removes PFAS to non-detectable levels. Critical for " + l.city + " well and municipal users.",
       href: "Whole Home PFAS PFOA",
     },
     {
@@ -173,7 +173,7 @@ const LocationProcess = () => {
     },
     {
       n: "02", t: "Get your written water report",
-      d: "We test for 16 contaminants on-site and hand you a plain-English written report before we leave. No pressure.",
+      d: "We test for numerous contaminants on-site and hand you a plain-English written report before we leave. No pressure.",
     },
     {
       n: "03", t: "We install in one day",
@@ -273,7 +273,7 @@ const LocationFAQ = () => {
     },
     {
       q: "Is the water test actually free?",
-      a: "Yes — no credit card, no obligation. A licensed tech comes to your home, tests for 16 contaminants, and hands you a written report. You decide what to do from there.",
+      a: "Yes — no credit card, no obligation. A licensed tech comes to your home, tests for numerous contaminants, and hands you a written report. You decide what to do from there.",
     },
     {
       q: "Are you licensed to work in " + l.state + "?",
@@ -366,7 +366,7 @@ const LocationCta = () => {
             Find out what's in your {l.city} water — free.
           </h2>
           <p style={{ color: "rgba(251,248,241,0.65)", maxWidth: 480, margin: "0 auto 36px", lineHeight: 1.6 }}>
-            A licensed Tarheel tech drives to your home, tests for 16 contaminants on-site, and leaves you with a written report. No pressure. No obligation.
+            A licensed Tarheel tech drives to your home, tests for numerous contaminants on-site, and leaves you with a written report. No pressure. No obligation.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="Book Free Water Test" className="btn btn-primary" style={{ padding: "16px 26px", fontSize: 15 }}>
